@@ -18,6 +18,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 25px;
 }
 
 .header{
@@ -69,6 +70,31 @@ input{
 
 /*------------------ Body --------------------*/
 
+.Title{
+    text-align: center;
+}
+
+.Title h1{
+    font-size: 36px;
+    color: rgb(219, 141, 24);
+    letter-spacing: 3px;
+}
+
+.line{
+    border-top: solid 1px #fff;
+}
+
+.menu_list_new{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 25px;
+}
+
+.menu_list_new .item i{
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: rgb(219, 141, 24);
+}
 
 .main_body{
     margin-top: 40px;
@@ -90,6 +116,11 @@ input{
     background: #fff;
     overflow: visible;
     margin-bottom: 10px;
+}
+
+.nameList .inf {
+    background: #fff;
+    margin-top: 15px;
 }
 
 .nameList p{
