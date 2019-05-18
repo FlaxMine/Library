@@ -105,7 +105,8 @@ input{
 .ListBook{
     background: #fff;
     overflow: visible;
-    padding: 12px;
+    padding-left: 16px;
+    padding-top: 5px;
     border-radius: 12px;
 }
 
