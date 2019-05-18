@@ -1,0 +1,28 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.container{
+    margin-left: 250px;
+    margin-right: 250px;
+    border: solid 1px red;
+}
+
+.main_header{
+    background: #f7f7f7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .edit{
+    margin-right: 15px;
+}
+
