@@ -29,8 +29,6 @@
 .logo{
     margin-right: 50px;
 }
-
-
 input{
     height: 40px;
     padding: 2px 32px;
@@ -81,11 +79,11 @@ input{
     padding-bottom: 16px;
 }
 
-
 .nameList span{
     background: #fff;
     overflow: visible;
     font-size: 18px;
+    font-weight: bold;
 }
 
 .nameList{
@@ -96,17 +94,17 @@ input{
 
 .Items{
     display: flex;
+    justify-content: space-around;
     background: #fff;
     overflow: visible;
 }
-
-
 
 .ListBook{
     background: #fff;
     overflow: visible;
     padding-left: 16px;
-    padding-top: 5px;
+    padding-top: 15px;
+    padding-bottom: 25px;
     border-radius: 12px;
 }
 
@@ -122,3 +120,14 @@ input{
 .photo img{
     border-radius: 7px;
 }
+
+.name span{
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.autor span{
+    font-size: 12px;
+    color: #7c7f84;
+}
+
