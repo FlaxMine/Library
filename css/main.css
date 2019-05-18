@@ -92,6 +92,12 @@ input{
     margin-bottom: 10px;
 }
 
+.nameList p{
+    font-size: 16px;
+    color: #7c7f84;
+    margin-bottom: 7px;
+}
+
 .Items{
     display: flex;
     justify-content: space-around;
@@ -106,6 +112,7 @@ input{
     padding-top: 15px;
     padding-bottom: 25px;
     border-radius: 12px;
+    margin-bottom: 50px;
 }
 
 .repeat{
@@ -131,3 +138,53 @@ input{
     color: #7c7f84;
 }
 
+
+
+/*---------------  Footer  ----------------*/
+
+footer{
+    background: #fffbf1;
+    color: #be5b04;
+}
+
+.footer div, i{
+    background: #fffbf1;
+}
+
+.footer .bold {
+    font-weight: bold;  
+    margin-bottom: 15px;
+}
+
+.footer{
+    background: #fffbf1;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+.project li, p{
+    background: #fffbf1;
+    overflow: visible;
+}
+
+.footer i{
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.footer a{
+    text-decoration: none;
+    background: #fffbf1;
+    overflow: visible;
+    color: #be5b04;
+}
+
+.project li{
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.phone_field{
+    margin-bottom: 15px;
+}
