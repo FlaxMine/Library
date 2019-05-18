@@ -2,8 +2,7 @@
     padding: 0px;
     margin: 0px;
     background: #f7f7f7;
-    font-family: firasans,sans-serif;
-    
+    font-family: firasans,sans-serif; 
 }
 
 .container{
@@ -28,26 +27,22 @@
 }
 
 .logo{
-    margin-right: 60px;
+    margin-right: 50px;
 }
 
 
-.input_search{
+input{
     height: 40px;
     padding: 2px 32px;
     background: #fff;
-    border: none;
     border-radius: 12px;
     border: 1px solid #cecece;
     font-family: firasans,sans-serif;
     font-size: 16px;
     line-height: 1.33em;
     color: #7c7f84;
-    z-index: 100;
     text-align: left;
-    -webkit-transition: all .2s;
-    transition: all .2s;
-    width: 300px;
+    width: 250px;
 }
 
 .header_menu{
@@ -59,12 +54,12 @@
 }
 
 .search{
-    margin-right: 40px;
+    margin-right: 35px;
 }
 
 .menu_item{
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 15px;
     color: rgb(219, 141, 24);
 }
 
@@ -86,3 +81,43 @@
     padding-bottom: 16px;
 }
 
+
+.nameList span{
+    background: #fff;
+    overflow: visible;
+    font-size: 18px;
+}
+
+.nameList{
+    background: #fff;
+    overflow: visible;
+    margin-bottom: 10px;
+}
+
+.Items{
+    display: flex;
+    background: #fff;
+    overflow: visible;
+}
+
+
+
+.ListBook{
+    background: #fff;
+    overflow: visible;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.repeat{
+    background: #fff;
+    overflow: visible; 
+}
+
+.bookItem{
+    margin-right: 20px;
+}
+
+.photo img{
+    border-radius: 7px;
+}
