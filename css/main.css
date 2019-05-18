@@ -1,16 +1,19 @@
 *{
     padding: 0px;
     margin: 0px;
+    background: #f7f7f7;
 }
 
 .container{
-    margin-left: 250px;
-    margin-right: 250px;
-    border: solid 1px red;
+    margin-left: 350px;
+    margin-right: 350px;
+    margin-top: 10px;
 }
 
-.main_header{
-    background: #f7f7f7;
+
+/*---------------- Header -------------------*/
+
+.main_header{  
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,7 +25,74 @@
     align-items: center;
 }
 
-.header .edit{
-    margin-right: 15px;
+.logo{
+    margin-right: 70px;
+}
+
+.search{
+    position: relative;
+    margin-right: 70px;
+}
+
+.read{
+    margin-right: 25px;
+}
+
+.library{
+    margin-right: 25px;
+}
+
+.subscription{
+    margin-right: 150px;
+}
+
+.input_search{
+    height: 40px;
+    padding: 2px 32px;
+    background: #fff;
+    border: none;
+    border-radius: 12px;
+    border: 1px solid #cecece;
+    font-family: firasans,sans-serif;
+    font-size: 16px;
+    line-height: 1.33em;
+    color: #7c7f84;
+    z-index: 100;
+    text-align: left;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    width: 300px;
+}
+
+.header_menu{
+    margin-right: 25px;
+}
+
+.menu_list{
+    list-style: none;
+}
+
+.menu_item{
+    display: inline-block;
+    margin-right: 30px;
+    color: rgb(219, 141, 24);
+}
+
+.auth a{
+    text-decoration: none;
+    color: rgb(219, 141, 24);
+}
+
+
+/*------------------ Body --------------------*/
+
+
+.main_body{
+    margin-top: 40px;
+}
+
+.main_body h1{
+    font-size: 48px;
+    padding-bottom: 16px;
 }
 
