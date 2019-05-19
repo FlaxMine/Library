@@ -169,6 +169,47 @@ input{
     color: #7c7f84;
 }
 
+.Text_Container{
+    margin-bottom: 20px;
+}
+
+.Text_arcticle{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.main_paragraph{
+    padding-bottom: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.paragraph{
+    padding-bottom: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1em;
+}
+
+.Text_section{
+    width: calc(50% - 10px);
+}
+
+
+.Text_section p{
+    background: #f7f7f7;
+}
+
+.text {
+    line-height: 1.5em;
+    font-size: 16px;
+    color: #393f45;
+    margin-bottom: 15px;
+}
+
 
 
 /*---------------  Footer  ----------------*/
