@@ -8,6 +8,15 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    <link rel="stylesheet" href="css/slider.css" type="text/css">
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
+
 
 </head>
 <body>
@@ -42,10 +51,8 @@
         </div>
     </header>
 
-
     <main>
-        <section>
-        
+        <section>       
             <div class="line container"></div>
     
             <div class="Title container">
@@ -99,104 +106,130 @@
                         <span>Мы добавляем лучшие новинки</span>                 
                         <p class="inf">2000 книг каждый день. Модные авторы и эксклюзивные издательства</p>           
                     </div>
-                    <div class="Items">
-                        <div class="bookItem">
-                            <div class="photo">
-                                <a href="#"><img src="img/851617ca-953f-43fb-94de-8b3a01e01320.jpg" alt=""></a>
-                            </div>
-                            <div class="name repeat">
-                                <span class="repeat">Айвенго</span>
-                            </div>
-                            <div class="autor repeat">
-                                <span class="repeat">Вальтер Скотт</span>
-                            </div>
-                        </div>  
-                        
-                        <div class="bookItem">
-                            <div class="photo">
-                                <a href="#"><img src="img/851617ca-953f-43fb-94de-8b3a01e01320.jpg" alt=""></a>
-                            </div>
-                            <div class="name repeat">
-                                <span class="repeat">Айвенго</span>
-                            </div>
-                            <div class="autor repeat">
-                                <span class="repeat">Вальтер Скотт</span>
-                            </div>
-                        </div>  
-    
-                        <div class="bookItem">
-                            <div class="photo">
-                                <a href="#"><img src="img/851617ca-953f-43fb-94de-8b3a01e01320.jpg" alt=""></a>
-                            </div>
-                            <div class="name repeat">
-                                <span class="repeat">Айвенго</span>
-                            </div>
-                            <div class="autor repeat">
-                                <span class="repeat">Вальтер Скотт</span>
-                            </div>
-                        </div>  
-    
-                        <div class="bookItem">
-                            <div class="photo">
-                                <a href="#"><img src="img/851617ca-953f-43fb-94de-8b3a01e01320.jpg" alt=""></a>
-                            </div>
-                            <div class="name repeat">
-                                <span class="repeat">Айвенго</span>
-                            </div>
-                            <div class="autor repeat">
-                                <span class="repeat">Вальтер Скотт</span>
-                            </div>
-                        </div>  
-    
-                        <div class="bookItem">
-                            <div class="photo">
-                                <a href="#"><img src="img/851617ca-953f-43fb-94de-8b3a01e01320.jpg" alt=""></a>
-                            </div>
-                            <div class="name repeat">
-                                <span class="repeat">Айвенго</span>
-                            </div>
-                            <div class="autor repeat">
-                                <span class="repeat">Вальтер Скотт</span>
-                            </div>
-                        </div> 
-    
-                        <div class="bookItem">
-                            <div class="photo">
-                                <a href="#"><img src="img/851617ca-953f-43fb-94de-8b3a01e01320.jpg" alt=""></a>
-                            </div>
-                            <div class="name repeat">
-                                <span class="repeat">Айвенго</span>
-                            </div>
-                            <div class="autor repeat">
-                                <span class="repeat">Вальтер Скотт</span>
-                            </div>
-                        </div> 
-    
-                        <div class="bookItem">
-                            <div class="photo">
-                                <a href="#"><img src="img/851617ca-953f-43fb-94de-8b3a01e01320.jpg" alt=""></a>
-                            </div>
-                            <div class="name repeat">
-                                <span class="repeat">Айвенго</span>
-                            </div>
-                            <div class="autor repeat">
-                                <span class="repeat">Вальтер Скотт</span>
-                            </div>
-                        </div> 
-    
-                        <div class="bookItem">
-                            <div class="photo">
-                                <a href="#"><img src="img/851617ca-953f-43fb-94de-8b3a01e01320.jpg" alt=""></a>
-                            </div>
-                            <div class="name repeat">
-                                <span class="repeat">Айвенго</span>
-                            </div>
-                            <div class="autor repeat">
-                                <span class="repeat">Вальтер Скотт</span>
-                            </div>
-                        </div> 
+                    <div class="box_slider">
+                        <div class="Items">
+                            <div class="bookItem">
+                                <div class="photo">
+                                    <a href="#"><img src="img/851617ca-953f-43fb-94de-8b3a01e01320.jpg" alt=""></a>
+                                </div>
+                                <div class="name repeat">
+                                    <span class="repeat">Айвенго</span>
+                                </div>
+                                <div class="autor repeat">
+                                    <span class="repeat">Вальтер Скотт</span>
+                                </div>
+                            </div>  
+                            
+                            <div class="bookItem">
+                                <div class="photo">
+                                    <a href="#"><img src="img/851617ca-953f-43fb-94de-8b3a01e01320.jpg" alt=""></a>
+                                </div>
+                                <div class="name repeat">
+                                    <span class="repeat">Айвенго</span>
+                                </div>
+                                <div class="autor repeat">
+                                    <span class="repeat">Вальтер Скотт</span>
+                                </div>
+                            </div>  
         
-                    </div> 
+                            <div class="bookItem">
+                                <div class="photo">
+                                    <a href="#"><img src="img/851617ca-953f-43fb-94de-8b3a01e01320.jpg" alt=""></a>
+                                </div>
+                                <div class="name repeat">
+                                    <span class="repeat">Айвенго</span>
+                                </div>
+                                <div class="autor repeat">
+                                    <span class="repeat">Вальтер Скотт</span>
+                                </div>
+                            </div>  
+        
+                            <div class="bookItem">
+                                <div class="photo">
+                                    <a href="#"><img src="img/851617ca-953f-43fb-94de-8b3a01e01320.jpg" alt=""></a>
+                                </div>
+                                <div class="name repeat">
+                                    <span class="repeat">Айвенго</span>
+                                </div>
+                                <div class="autor repeat">
+                                    <span class="repeat">Вальтер Скотт</span>
+                                </div>
+                            </div>  
+        
+                            <div class="bookItem">
+                                <div class="photo">
+                                    <a href="#"><img src="img/851617ca-953f-43fb-94de-8b3a01e01320.jpg" alt=""></a>
+                                </div>
+                                <div class="name repeat">
+                                    <span class="repeat">Айвенго</span>
+                                </div>
+                                <div class="autor repeat">
+                                    <span class="repeat">Вальтер Скотт</span>
+                                </div>
+                            </div> 
+        
+                            <div class="bookItem">
+                                <div class="photo">
+                                    <a href="#"><img src="img/851617ca-953f-43fb-94de-8b3a01e01320.jpg" alt=""></a>
+                                </div>
+                                <div class="name repeat">
+                                    <span class="repeat">Айвенго</span>
+                                </div>
+                                <div class="autor repeat">
+                                    <span class="repeat">Вальтер Скотт</span>
+                                </div>
+                            </div> 
+        
+                            <div class="bookItem">
+                                <div class="photo">
+                                    <a href="#"><img src="img/851617ca-953f-43fb-94de-8b3a01e01320.jpg" alt=""></a>
+                                </div>
+                                <div class="name repeat">
+                                    <span class="repeat">Айвенго</span>
+                                </div>
+                                <div class="autor repeat">
+                                    <span class="repeat">Вальтер Скотт</span>
+                                </div>
+                            </div> 
+        
+                            <div class="bookItem">
+                                <div class="photo">
+                                    <a href="#"><img src="img/851617ca-953f-43fb-94de-8b3a01e01320.jpg" alt=""></a>
+                                </div>
+                                <div class="name repeat">
+                                    <span class="repeat">Айвенго</span>
+                                </div>
+                                <div class="autor repeat">
+                                    <span class="repeat">Вальтер Скотт</span>
+                                </div>
+                            </div> 
+
+                            <div class="bookItem">
+                                <div class="photo">
+                                    <a href="#"><img src="img/851617ca-953f-43fb-94de-8b3a01e01320.jpg" alt=""></a>
+                                </div>
+                                <div class="name repeat">
+                                    <span class="repeat">Айвенго</span>
+                                </div>
+                                <div class="autor repeat">
+                                    <span class="repeat">Вальтер Скотт</span>
+                                </div>
+                            </div> 
+        
+                            <div class="bookItem">
+                                <div class="photo">
+                                    <a href="#"><img src="img/851617ca-953f-43fb-94de-8b3a01e01320.jpg" alt=""></a>
+                                </div>
+                                <div class="name repeat">
+                                    <span class="repeat">Айвенго</span>
+                                </div>
+                                <div class="autor repeat">
+                                    <span class="repeat">Вальтер Скотт</span>
+                                </div>
+                            </div>
+            
+                        </div> 
+                    </div>
                 </div>
     
                 <div class="ListBook">
@@ -290,16 +323,40 @@
                         </div> 
     
                         <div class="bookItem">
-                                <div class="photo">
-                                    <a href="#"><img src="img/851617ca-953f-43fb-94de-8b3a01e01320.jpg" alt=""></a>
-                                </div>
-                                <div class="name repeat">
-                                    <span class="repeat">Айвенго</span>
-                                </div>
-                                <div class="autor repeat">
-                                    <span class="repeat">Вальтер Скотт</span>
-                                </div>
+                            <div class="photo">
+                                <a href="#"><img src="img/851617ca-953f-43fb-94de-8b3a01e01320.jpg" alt=""></a>
+                            </div>
+                            <div class="name repeat">
+                                <span class="repeat">Айвенго</span>
+                            </div>
+                            <div class="autor repeat">
+                                <span class="repeat">Вальтер Скотт</span>
+                            </div>
                         </div> 
+
+                        <div class="bookItem">
+                            <div class="photo">
+                                <a href="#"><img src="img/851617ca-953f-43fb-94de-8b3a01e01320.jpg" alt=""></a>
+                            </div>
+                            <div class="name repeat">
+                                <span class="repeat">Айвенго</span>
+                            </div>
+                            <div class="autor repeat">
+                                <span class="repeat">Вальтер Скотт</span>
+                            </div>
+                        </div> 
+    
+                        <div class="bookItem">
+                            <div class="photo">
+                                <a href="#"><img src="img/851617ca-953f-43fb-94de-8b3a01e01320.jpg" alt=""></a>
+                            </div>
+                            <div class="name repeat">
+                                <span class="repeat">Айвенго</span>
+                            </div>
+                            <div class="autor repeat">
+                                <span class="repeat">Вальтер Скотт</span>
+                            </div>
+                        </div>
         
                     </div> 
                 </div>               
