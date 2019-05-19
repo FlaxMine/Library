@@ -56,11 +56,15 @@ input{
     margin-right: 35px;
 }
 
+
+
 .menu_item{
     display: inline-block;
     margin-right: 15px;
     color: rgb(219, 141, 24);
 }
+
+
 
 .auth a{
     text-decoration: none;
