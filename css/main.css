@@ -258,6 +258,7 @@ input{
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: 15px;
+    display: block;
 }
 
 .paragraph{
@@ -271,6 +272,10 @@ input{
     width: calc(50% - 10px);
 }
 
+
+.width_article{
+    width: 864px;
+}
 
 .Text_section p{
     background: #f7f7f7;
