@@ -170,10 +170,14 @@ input{
     background: #fff;
     overflow: visible;
     margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
+   
 }
 
+.nameList2{
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+}
 
 .location{
     background: #fff;
@@ -195,11 +199,6 @@ input{
     margin-top: 15px;
 }
 
-.nameList .location p{
-    font-size: 16px;
-    color: #7c7f84;
-    margin-bottom: 7px;
-}
 
 
 .Items{
