@@ -76,6 +76,7 @@ input{
     justify-content: space-between;
     align-items: center;
     background: #fff;
+    padding-right: 15px;
 }
 
 .GenreItems p{
@@ -263,7 +264,38 @@ input{
     margin-bottom: 15px;
 }
 
+.items_genre a{
+    text-decoration: none;
+}
 
+.items_genre span{
+    background: #fff;
+    color: #be5b04;
+}
+
+.left_part{
+    width: 250px;
+    background: #fff;
+}
+
+.quantity_genre{
+    background: #fff;
+    display: block;
+    margin-bottom: 16px;
+    color: #7c7f84
+}
+
+.Genre{
+    background: #fff;
+    padding-bottom: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.item_lefpart{
+    background: #fff;
+}
 
 /*---------------  Footer  ----------------*/
 
