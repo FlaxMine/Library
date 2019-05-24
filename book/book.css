@@ -1,14 +1,54 @@
+.menu{
+    margin-top: 40px;
+}
+
 .items_menu{
-    display: block;
     list-style: none;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    padding-inline-start: 40px;
+    display: flex; 
 }
 
+h3{
+    font-size: 20px;
+}
 
-.image_arrow{
-    display: inline-block;
+i{
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.items_menu a{
+    text-decoration: none;
+    color: #be5b04;
+    font-size: 12px;
+    line-height: 16px;
+    margin-left: 5px;
+}
+
+.about{
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.book_information{
+    margin-left: 30px;
+}
+
+.book{
+    display: flex;
+}
+
+.about_book{
+    width: 500px;
+}
+
+.text{
+    background: #f7f7f7;
+}
+
+.detailed_information h3{
+    margin-bottom: 15px;
 }
