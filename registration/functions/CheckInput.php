@@ -9,7 +9,7 @@
 
     $link = mysqli_connect('localhost', 'root', '', 'library') or die("Ошибка " . mysqli_error($link));
     $a = $data['email'];
-    $result = mysqli_query($link, "SELECT id_user FROM user WHERE email='$a'");
+    $result = mysqli_query($link, "SELECT id_user FROM users WHERE email='$a'");
     $myrow = mysqli_fetch_array($result);
 
     if(!empty($myrow['id_user'])){

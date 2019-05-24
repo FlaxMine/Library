@@ -1,3 +1,16 @@
+<?php
+
+    session_start();
+
+    $logged_user = isset($_SESSION['logged_user']) ? $_SESSION['logged_user'] : null;
+
+    $a=0;
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,8 +56,20 @@
                 </div> 
 
                 <div class="auth">
-                    <a href="authorization/auth.html" class="log_in">Войти |</a>
-                    <a href="registration/registration.html" class="sign_in">Зарегистрироваться</a>
+                    <?php
+                        if(empty($_SESSION['logged_user'])){
+                    ?>
+                        <a href="authorization/auth.php" class="log_in">Войти |</a>
+                        <a href="registration/registration.php" class="sign_in">Зарегистрироваться</a>
+                    <?php
+                        }
+                        else{
+                    ?>
+                        <span class="logged_user"><?php echo $_SESSION['logged_user']; ?><a href="logout/logout.php"> | Выйти</a></span>
+                    <?php
+                        }
+                    ?>
+                    
                 </div>
 
             </div>

@@ -1,3 +1,42 @@
+<?php
+
+    require "../database/connection.php";
+    $link = ConnectionDB();
+    session_start();
+
+    $data = $_POST;
+    $errors = array();
+    
+
+    if(isset($data['do_signin'])){
+        if(($data['email'] != '') or ($data['password'] != '')){
+
+            $email = $data['email'];
+            $password = $data['password'];
+            $user = mysqli_query($link, "SELECT email, password FROM users WHERE email='$email'");
+            $myrow = mysqli_fetch_array($user);
+
+            if(!empty($myrow['email'])){
+                if(password_verify($data['password'], $myrow['password'])){
+                    $_SESSION['logged_user'] = $myrow['email'];
+                    if(!empty($_SESSION['logged_user'])){
+                        header("Location: ../index.php");
+                    }                 
+                }
+                else{
+                    $errors[] = 'Логин или пароль введен неверно!';
+                }
+            }
+            else{
+                $errors[] = 'Пользователь с таким email не существует!';
+            }
+        }else{$errors[] = 'Заполните поля';}        
+    }
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,14 +89,17 @@
 
         <form method="POST">
             <div class="email">
-                <input type="text" placeholder="Введите почту">
+                <input type="text" name="email" placeholder="Введите почту" value="<?php echo @$data['email'];?>">
             </div>
 
             <div class="password">
-                <input type="password" placeholder="Пароль">
+                <input type="password" name="password" placeholder="Пароль">
+                <?php  if(!empty($errors)) { echo '<div style="color: red">'.array_shift($errors).'</div>';} ?>
             </div>
 
-            <button class="button">Войти</button>
+            <div>
+                <input class="button" type="submit" name="do_signin" value="Войти">
+            </div>
         </form>
     </div>
 

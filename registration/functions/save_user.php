@@ -9,7 +9,7 @@
     $password = $_POST['password'];
     $password = password_hash($password, PASSWORD_DEFAULT);
     
-    $result = mysqli_query($link, "INSERT INTO user (first_name, second_name, password, email) 
+    $result = mysqli_query($link, "INSERT INTO users (first_name, second_name, password, email) 
             VALUES ('$first_name', '$second_name', '$password', '$email')");
 
     

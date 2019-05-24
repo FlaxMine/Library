@@ -56,7 +56,9 @@ input{
     margin-right: 35px;
 }
 
-
+.logged_user{
+    color: rgb(219, 141, 24);
+}
 
 .menu_item{
     display: inline-block;
