@@ -6,15 +6,13 @@
     $data = $_REQUEST;
     if(isset($data['do_signup'])){
 
-        include 'CheckInput.php';
-        require "CheckArray.php";
+        include 'functions/CheckInput.php';
+        require "functions/CheckArray.php";
 
         if(check_array($errors)){
-            require "save_user.php";
-        }
-        
+            require "functions/save_user.php";
+        }      
     }
-
 ?>
 
 <!DOCTYPE html>
