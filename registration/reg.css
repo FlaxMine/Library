@@ -18,6 +18,7 @@ form div{
     padding: 2px 32 px;
     height: 40px;
     color: #be5b04;
+    text-align: center;
 }
 
 .button:hover{

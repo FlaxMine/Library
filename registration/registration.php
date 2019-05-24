@@ -1,3 +1,22 @@
+<?php
+
+    require "../database/connection.php";
+    $link = ConnectionDB();
+
+    $data = $_REQUEST;
+    if(isset($data['do_signup'])){
+
+        include 'CheckInput.php';
+        require "CheckArray.php";
+
+        if(check_array($errors)){
+            require "save_user.php";
+        }
+        
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,33 +62,39 @@
     </header>
 
     <div class="registration container">
-
         <div class="resistr">
             <h1>Регистрация</h1><br>
         </div>
-        <form method="POST">
+        <form action="registration.php" method="POST">
             <div class="name">
-                <input type="text" placeholder="Введите Имя">
+                <input type="text" name="name" placeholder="Введите Имя" value = "<?php echo @$data['name'];?>">
+                <?php  if(!empty($errors)) { echo '<div style="color: red">'.$errors[3].'</div>';} ?> 
             </div>
 
              <div class="fam">
-                <input type="text" placeholder="Введите Фамилию">
+                <input type="text" name="fam" placeholder="Введите Фамилию" value = "<?php echo @$data['fam'];?>">
+                <?php  if(!empty($errors)) { echo '<div style="color: red">'.$errors[4].'</div>';} ?>
             </div>
 
              <div class="email">
-                <input type="text" placeholder="Введите почту">
+                <input type="text" name="email" placeholder="Введите почту" value="<?php echo @$data['email'];?>">
+                <?php  if(!empty($errors)) { echo '<div style="color: red>'.$errors[0].'</div>';} ?>   
             </div>
 
              <div class="password">
-                <input type="password" placeholder="Пароль">
+                <input type="password" name="password" placeholder="Пароль">
+                <?php  if(!empty($errors)) { echo '<div style="color: red">'.$errors[1].'</div>';} ?>
             </div>
 
              <div class="password">
-                <input type="password" placeholder="Повторите пароль">
-            </div>  
+                <input type="password" name="password_2" placeholder="Повторите пароль">
+                <?php  if(!empty($errors)) { echo '<div style="color: red">'.$errors[2].'</div>';} ?>
+            </div>   
 
-            <button class="button">Зарегистрироваться</button>
-        </form>
+            <div>
+                <input class="button" type="submit" name="do_signup" value="Зарегистрироваться">
+            </div>
+        </form>    
     </div>
 
     <footer>
