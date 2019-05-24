@@ -1,0 +1,25 @@
+.registration, .authorization{
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+
+form div{
+    margin-bottom: 15px;
+}
+
+.button{
+    width: 310px;
+    font-size: 16px;
+    background: #fff;
+    border: 1px solid #7c7f84;
+    border-radius: 12px;
+    padding: 2px 32 px;
+    height: 40px;
+    color: #be5b04;
+}
+
+.button:hover{
+    background: #f7f7f7;
+}

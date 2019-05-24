@@ -2,7 +2,6 @@
     display: flex;
 }
 
-
 .menu{
     margin-top: 40px;
 }
@@ -10,6 +9,7 @@
 h3{
     font-size: 20px;
 }
+
 
 .about{
     margin-top: 15px;
