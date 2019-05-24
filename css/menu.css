@@ -1,0 +1,21 @@
+.items_menu{
+    list-style: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    display: flex; 
+}
+
+.items_menu a{
+    text-decoration: none;
+    color: #be5b04;
+    font-size: 12px;
+    line-height: 16px;
+    margin-left: 5px;
+}
+
+i{
+    font-size: 10px;
+    margin-left: 5px;
+}
