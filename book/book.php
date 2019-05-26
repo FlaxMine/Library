@@ -1,3 +1,23 @@
+<?php
+
+    session_start();
+
+    require "../database/connection.php";
+    $link = ConnectionDB();
+
+    $id = $_REQUEST['id'];
+
+    $query = "SELECT * FROM 
+                        (SELECT * FROM detailed_information JOIN book on detailed_information.id_book=book.id) AS HELLO 
+                WHERE id=$id";
+    $result = mysqli_query($link, $query);
+
+    $detailed_information = mysqli_fetch_array($result)
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,31 +91,22 @@
     <div class="content container">
         <div class="book">
             <div class="image_book">
-                <img src="../img//book/225f8718-61c1-4ae3-a5ad-5c33193cc98c.jpg" width="256" height="426" alt="">
+                <img src="../<?php echo $detailed_information['img'];?>" width="256" height="426" alt="">
             </div>
             
             <div class="book_information">
-                <h1 class="name_book">Big data простым языком</h1>
+                <h1 class="name_book"><?php echo $detailed_information['name'];?></h1>
                 <div class="about_book">
                     <h3 class="about">About book</h3>
                     <p class="text">   
-                        Our phone knows more about us than we think. He can collect and
-                        analyze information about how we move around the city, what
-                        posts like and what applications we use. He will report traffic jams and
-                        hurry to work so that we are not late; will choose the music to our mood
-                        and make a list of personal recommendations than you can occupy yourself during
-                        of the day A telephone is no longer a calling device, it is already a means
-                        management of the world around us. Imperceptibly, we surrounded ourselves with such interfaces
-                        that create an invisible barrier between man and the environment.
-                        Planning, management, communication, everything is now built through these
-                        programs and devices. Even human relations.
+                        <?php echo $detailed_information['description'];?>
                     </p>
                     <div class="detailed_information">
                         <h3>Detailed information</h3>
                         <div>
-                            <p class="text">Date of writing: 2019</p>
-                            <p class="text">The year of publishing: 2019</p>
-                            <p class="text">Quantity pages: 578</p>
+                            <p class="text">Date of writing: <?php echo $detailed_information['year_write'];?></p>
+                            <p class="text">The year of publishing: <?php echo $detailed_information['year_edition'];?></p>
+                            <p class="text">Quantity pages: <?php echo $detailed_information['quantity_page'];?></p>
                         </div>
                     </div>
                 </div>
