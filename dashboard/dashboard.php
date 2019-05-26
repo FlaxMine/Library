@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Электронная библиотека</title>
+    <title>E-Library</title>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/main.css">
@@ -17,7 +17,7 @@
                 <div class="header">
 
                     <div class="logo">
-                        <a href="../index.html"><img src="../img/logo/Logo.PNG" alt=""></a>
+                        <a href="../index.php"><img src="../img/logo/Logo.PNG" alt=""></a>
                     </div>
     
                     <div class="search">
@@ -26,16 +26,15 @@
     
                     <div class="header_menu">
                         <ul class="menu_list">
-                            <a href="dashboard.html"><li class="menu_item">Что почитать</li></a>
-                            <a href="../Lib/Library.html"><li class="menu_item">Библиотека</li></a>  
-                            <a href="#"><li class="menu_item">Подписка</li></a>   
+                            <a href="dashboard.php"><li class="menu_item">What to read</li></a>
+                            <a href="../Lib/Library.php"><li class="menu_item">Library</li></a>  
                         </ul>
                     </div>
                 </div> 
 
                 <div class="auth">
-                    <a href="#" class="log_in">Войти |</a>
-                    <a href="#" class="sign_in">Зарегистрироваться</a>
+                    <a href="../authorization/auth.php" class="log_in">Sign in |</a>
+                    <a href="../registration/registration.php" class="sign_in">Sing up</a>
                 </div>
 
             </div>
@@ -44,11 +43,11 @@
 
     <section>
         <div class="main_body container">
-            <h1>Что почитать</h1> 
+            <h1>What to read</h1> 
            
             <div class="ListBook">
                 <div class="nameList">
-                    <span>Ваша персональная подборка</span>
+                    <span>Your personal selection</span>
                 </div>
                 <div class="Items">
                     <div class="bookItem">
@@ -153,8 +152,8 @@
 
             <div class="ListBook">
                 <div class="nameList">
-                    <p class="repeat">Фантастика, Фэнтези</p>
-                    <span>Альтернативная история</span>
+                    <p class="repeat">Fantasy</p>
+                    <span>Alternative history</span>
                 </div>
                 <div class="Items">
                     <div class="bookItem">
@@ -258,8 +257,8 @@
 
             <div class="ListBook">
                 <div class="nameList">
-                    <p class="repeat">Новинки, Психология</p>
-                    <span>Психология: новинки жанра</span>
+                    <p class="repeat">Novelties, Psychology</p>
+                    <span>Psychology: new genre</span>
                 </div>
                 <div class="Items">
                     <div class="bookItem">
@@ -363,8 +362,8 @@
 
             <div class="ListBook">
                 <div class="nameList">
-                    <p class="repeat">Компьютерная литература</p>
-                    <span>Базы данных</span>
+                    <p class="repeat">Computer literature</p>
+                    <span>Database</span>
                 </div>
                 <div class="Items">
                     <div class="bookItem">
@@ -472,20 +471,20 @@
     <footer>
         <div class="footer container">
             <div class="project">
-                <p class="bold">О проекте Library</p>
-                <a href="#"><li>О проекте</li></a>
-                <a href="#"><li>Условия использования</li></a>
-                <a href="#"><li>Политика конфиденциальности</li></a>
+                <p class="bold">About project of Library</p>
+                <a href="#"><li>About project</li></a>
+                <a href="#"><li>Terms of Use</li></a>
+                <a href="#"><li>Privacy policy</li></a>
             </div>
 
             <div class="application">
-                <p class="bold">Скачать приложение</p>
+                <p class="bold">Download application</p>
                 <a href="#"><i class="fab fa-android"></i></a>
                 <a href="#"><i class="fab fa-apple"></i></a>
             </div>
 
             <div class="news">
-                <p class="bold">Следите за новостями</p>
+                <p class="bold">Follow the news</p>
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-vk"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -494,7 +493,7 @@
             </div>
 
             <div class="support">
-                <p class="bold">Служба поддержки</p>
+                <p class="bold">Support</p>
                 <div class="phone_field">
                     <p>8-800-333-27-37</p>
                 </div>

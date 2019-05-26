@@ -29,7 +29,7 @@
                 <div class="header">
 
                     <div class="logo">
-                        <a href="../index.html"><img src="../img/logo/Logo.PNG" alt=""></a>
+                        <a href="../index.php"><img src="../img/logo/Logo.PNG" alt=""></a>
                     </div>
     
                     <div class="search">
@@ -38,9 +38,8 @@
     
                     <div class="header_menu">
                         <ul class="menu_list">
-                            <a href="dashboard.html"><li class="menu_item">Что почитать</li></a>
-                            <a href="../Lib/Library.html"><li class="menu_item">Библиотека</li></a>  
-                            <a href="#"><li class="menu_item">Подписка</li></a>   
+                            <a href="dashboard.php"><li class="menu_item">Что почитать</li></a>
+                            <a href="../Lib/Library.php"><li class="menu_item">Библиотека</li></a>    
                         </ul>
                     </div>
                 </div> 

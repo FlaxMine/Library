@@ -57,25 +57,24 @@
                 <div class="header">
 
                     <div class="logo">
-                        <a href="../index.html"><img src="../img/logo/Logo.PNG" alt=""></a>
+                        <a href="../index.php"><img src="../img/logo/Logo.PNG" alt=""></a>
                     </div>
     
                     <div class="search">
-                        <input class="input_search" type="text" placeholder="Книга или автор"> 
+                        <input class="input_search" type="text" placeholder="Book or author"> 
                     </div>
     
                     <div class="header_menu">
                         <ul class="menu_list">
-                            <a href="dashboard/dashboard.html"><li class="menu_item">Что почитать</li></a>
-                            <a href="Lib/Library.html"><li class="menu_item">Библиотека</li></a>  
-                            <a href="#"><li class="menu_item">Подписка</li></a>   
+                            <a href="dashboard/dashboard.php"><li class="menu_item">What to read</li></a>
+                            <a href="Lib/Library.php"><li class="menu_item">Library</li></a>    
                         </ul>
                     </div>
                 </div> 
 
                 <div class="auth">
-                    <a href="auth.html" class="log_in">Войти |</a>
-                    <a href="../registration/registration.php" class="sign_in">Зарегистрироваться</a>
+                    <a href="auth.php" class="log_in">Sign in |</a>
+                    <a href="../registration/registration.php" class="sign_in">Sign up</a>
                 </div>
 
             </div>
@@ -84,21 +83,21 @@
 
     <div class="authorization container">
         <div class="auth">
-            <h1>Вход</h1><br>
+            <h1>Enter</h1><br>
         </div>
 
         <form method="POST">
             <div class="email">
-                <input type="text" name="email" placeholder="Введите почту" value="<?php echo @$data['email'];?>">
+                <input type="text" name="email" placeholder="Email" value="<?php echo @$data['email'];?>">
             </div>
 
             <div class="password">
-                <input type="password" name="password" placeholder="Пароль">
+                <input type="password" name="password" placeholder="Password">
                 <?php  if(!empty($errors)) { echo '<div style="color: red">'.array_shift($errors).'</div>';} ?>
             </div>
 
             <div>
-                <input class="button" type="submit" name="do_signin" value="Войти">
+                <input class="button" type="submit" name="do_signin" value="Sign in">
             </div>
         </form>
     </div>
@@ -106,20 +105,20 @@
     <footer>
         <div class="footer container">
             <div class="project">
-                <p class="bold">О проекте Library</p>
-                <a href="#"><li>О проекте</li></a>
-                <a href="#"><li>Условия использования</li></a>
-                <a href="#"><li>Политика конфиденциальности</li></a>
+                <p class="bold">About project of Library</p>
+                <a href="#"><li>About project</li></a>
+                <a href="#"><li>Terms of Use</li></a>
+                <a href="#"><li>Privacy policy</li></a>
             </div>
 
             <div class="application">
-                <p class="bold">Скачать приложение</p>
+                <p class="bold">Download application</p>
                 <a href="#"><i class="fab fa-android"></i></a>
                 <a href="#"><i class="fab fa-apple"></i></a>
             </div>
 
             <div class="news">
-                <p class="bold">Следите за новостями</p>
+                <p class="bold">Follow the news</p>
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-vk"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -128,7 +127,7 @@
             </div>
 
             <div class="support">
-                <p class="bold">Служба поддержки</p>
+                <p class="bold">Support</p>
                 <div class="phone_field">
                     <p>8-800-333-27-37</p>
                 </div>

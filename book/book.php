@@ -27,25 +27,24 @@
                 <div class="header">
 
                     <div class="logo">
-                        <a href="../index.html"><img src="../img//logo/Logo.PNG" alt=""></a>
+                        <a href="../index.php"><img src="../img//logo/Logo.PNG" alt=""></a>
                     </div>
     
                     <div class="search">
-                        <input class="input_search" type="text" placeholder="Книга или автор"> 
+                        <input class="input_search" type="text" placeholder="Book or author"> 
                     </div>
     
                     <div class="header_menu">
                         <ul class="menu_list">
-                            <a href="dashboard.html"><li class="menu_item">Что почитать</li></a>
-                            <a href="../Lib/Library.html"><li class="menu_item">Библиотека</li></a>  
-                            <a href="#"><li class="menu_item">Подписка</li></a>   
+                            <a href="dashboard.php"><li class="menu_item">What to read</li></a>
+                            <a href="../Lib/Library.php"><li class="menu_item">Library</li></a>    
                         </ul>
                     </div>
                 </div> 
 
                 <div class="auth">
-                    <a href="#" class="log_in">Войти |</a>
-                    <a href="#" class="sign_in">Зарегистрироваться</a>
+                    <a href="../authorization/auth.php" class="log_in">Sign in |</a>
+                    <a href="../registration/registration.php" class="sign_in">Sign up</a>
                 </div>
 
             </div>
@@ -55,10 +54,10 @@
     <div class="menu container">
         <ul class="items_menu">
             <li class="item_menu">
-                <a href="#">LibBook <i class="fas fa-minus"></i> &nbsp;Электронная библиотека</a>
+                <a href="#">LibBook <i class="fas fa-minus"></i> &nbsp;E-Library</a>
             </li>
             <li class="item_menu">
-                <a href="#"><span class="image_arrow"> <i class="fas fa-chevron-right"></i> &nbsp;Библиотека</span></a>
+                <a href="#"><span class="image_arrow"> <i class="fas fa-chevron-right"></i> &nbsp;Library</span></a>
             </li>
             <li class="item_menu">
                 <a href="../author/author.html"><span class="image_arrow"> <i class="fas fa-chevron-right"></i> &nbsp;Алексей Благирев</span></a>
@@ -78,24 +77,25 @@
             <div class="book_information">
                 <h1 class="name_book">Big data простым языком</h1>
                 <div class="about_book">
-                    <h3 class="about">О книге</h3>
-                    <p class="text">Наш телефон знает о нас больше, чем мы думаем. Он умеет собирать и 
-                        анализировать информацию о том, как мы передвигаемся по городу, какие 
-                        посты лайкаем и какими приложениями пользуемся. Он сообщит о пробках и 
-                        поторопит на работу, чтобы мы не опоздали; подберет музыку под наше настроение
-                        и составит список персональных рекомендаций, чем можно занять себя в течение
-                        дня. Телефон – больше не устройство, по которому звонят, это уже средство
-                        управления окружающим нас миром. Незаметно мы окружили себя такими интерфейсами,
-                        которые создают невидимый барьер между человеком и окружающей средой. 
-                        Планирование, управление, коммуникация, все теперь строится через эти 
-                        программы и девайсы. Даже человеческие отношения.
+                    <h3 class="about">About book</h3>
+                    <p class="text">   
+                        Our phone knows more about us than we think. He can collect and
+                        analyze information about how we move around the city, what
+                        posts like and what applications we use. He will report traffic jams and
+                        hurry to work so that we are not late; will choose the music to our mood
+                        and make a list of personal recommendations than you can occupy yourself during
+                        of the day A telephone is no longer a calling device, it is already a means
+                        management of the world around us. Imperceptibly, we surrounded ourselves with such interfaces
+                        that create an invisible barrier between man and the environment.
+                        Planning, management, communication, everything is now built through these
+                        programs and devices. Even human relations.
                     </p>
                     <div class="detailed_information">
-                        <h3>Подробная информация</h3>
+                        <h3>Detailed information</h3>
                         <div>
-                            <p class="text">Дата написания: 2019</p>
-                            <p class="text">Год издания: 2019</p>
-                            <p class="text">Объем: 276.7 тыс. знаков</p>
+                            <p class="text">Date of writing: 2019</p>
+                            <p class="text">The year of publishing: 2019</p>
+                            <p class="text">Quantity pages: 578</p>
                         </div>
                     </div>
                 </div>
@@ -107,20 +107,20 @@
     <footer>
         <div class="footer container">
             <div class="project">
-                <p class="bold">О проекте Library</p>
-                <a href="#"><li>О проекте</li></a>
-                <a href="#"><li>Условия использования</li></a>
-                <a href="#"><li>Политика конфиденциальности</li></a>
+                <p class="bold">About project of Library</p>
+                <a href="#"><li>About project</li></a>
+                <a href="#"><li>Terms of Use</li></a>
+                <a href="#"><li>Privacy policy</li></a>
             </div>
 
             <div class="application">
-                <p class="bold">Скачать приложение</p>
+                <p class="bold">Download application</p>
                 <a href="#"><i class="fab fa-android"></i></a>
                 <a href="#"><i class="fab fa-apple"></i></a>
             </div>
 
             <div class="news">
-                <p class="bold">Следите за новостями</p>
+                <p class="bold">Follow the news</p>
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-vk"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -129,7 +129,7 @@
             </div>
 
             <div class="support">
-                <p class="bold">Служба поддержки</p>
+                <p class="bold">Support</p>
                 <div class="phone_field">
                     <p>8-800-333-27-37</p>
                 </div>

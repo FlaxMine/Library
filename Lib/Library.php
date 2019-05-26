@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Электронная библиотека</title>
+    <title>E-Library</title>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/main.css">
@@ -16,7 +16,7 @@
                 <div class="header">
 
                     <div class="logo">
-                        <a href="../index.html"><img src="../img/logo/Logo.PNG" alt=""></a>
+                        <a href="../index.php"><img src="../img/logo/Logo.PNG" alt=""></a>
                     </div>
     
                     <div class="search">
@@ -25,16 +25,15 @@
     
                     <div class="header_menu">
                         <ul class="menu_list">
-                            <a href="../dashboard/dashboard.html"><li class="menu_item">Что почитать</li></a>
-                            <a href="#"><li class="menu_item">Библиотека</li></a>  
-                            <a href="#"><li class="menu_item">Подписка</li></a>   
+                            <a href="../dashboard/dashboard.php"><li class="menu_item">What to read</li></a>
+                            <a href="#"><li class="menu_item">Library</li></a>     
                         </ul>
                     </div>
                 </div> 
 
                 <div class="auth">
-                    <a href="#" class="log_in">Войти |</a>
-                    <a href="../registration/registration.php" class="sign_in">Зарегистрироваться</a>
+                    <a href="../authorization/auth.php" class="log_in">Sign in |</a>
+                    <a href="../registration/registration.php" class="sign_in">Sing up</a>
                 </div>
 
             </div>
@@ -43,15 +42,15 @@
 
     <main>
         <div class="main_body container">
-            <h1>Библиотека</h1> 
+            <h1>Library</h1> 
             <div class="ListBook">
                 <div class="nameList">
-                    <span>Популярные жанры</span>
+                    <span>Popular genres</span>
                 </div>
                 <div class="GenreItems">
                     <div class="Item">
                         <div class="item_background">
-                            <b>Фантастика</b>
+                            <b>Fantasy</b>
                             <p>15 258 <i class="fas fa-book"></i></p>
                         </div>
                         <div class="img_color">
@@ -61,7 +60,7 @@
                     
                     <div class="Item">
                         <div class="item_background">
-                            <b>Бизнес-книги</b>
+                            <b>Business books</b>
                             <p>7 216 <i class="fas fa-book"></i></p>
                         </div>
                         <div class="img_color">
@@ -72,7 +71,7 @@
 
                     <div class="Item">
                         <div class="item_background">
-                            <b>Любовные романы</b>
+                            <b>Romance novels</b>
                             <p>11 281 <i class="fas fa-book"></i></p>
                         </div>
                         <div class="img_color">
@@ -82,7 +81,7 @@
 
                     <div class="Item">
                         <div class="item_background">
-                            <b>Книги по психологии</b>
+                            <b>Psychology books</b>
                             <p>8 403 <i class="fas fa-book"></i></p>
                         </div>
                         <div class="img_color">
@@ -92,7 +91,7 @@
 
                     <div class="Item">
                         <div class="item_background">
-                            <b>Фэнтези</b>
+                            <b>Fantasy</b>
                             <p>15 311 <i class="fas fa-book"></i></p>
                         </div>
                         <div class="img_color">
@@ -106,160 +105,160 @@
 
         <div class="main_content container">
             <div class="left_part">
-                <div class="Genre">Жанры</div>
-                <span class="quantity_genre">12 жанров</span>
+                <div class="Genre">Genres</div>
+                <span class="quantity_genre">12 genres</span>
 
                 <div class="items_genre">                
                     <a href="#">
                         <div class="item_lefpart">
-                            <span>Бизнес-книги</span>
+                            <span>Business books</span>
                             <span>7 216</span>
                         </div>
                     </a>  
                     <a href="#">
                         <div class="item_lefpart">
-                            <span>Бизнес-книги</span>
+                            <span>Business books</span>
                             <span>7 216</span>
                         </div>
                     </a>
                     <a href="#">
                         <div class="item_lefpart">
-                            <span>Бизнес-книги</span>
+                            <span>Business books</span>
                             <span>7 216</span>
                         </div>
                     </a>
                     <a href="#">
                         <div class="item_lefpart">
-                            <span>Бизнес-книги</span>
+                            <span>Business books</span>
                             <span>7 216</span>
                         </div>
                     </a>
                     <a href="#">
                         <div class="item_lefpart">
-                            <span>Бизнес-книги</span>
+                            <span>Business books</span>
                             <span>7 216</span>
                         </div>
                     </a>    
                     <a href="#">
                         <div class="item_lefpart">
-                            <span>Бизнес-книги</span>
+                            <span>Business books</span>
                             <span>7 216</span>
                         </div>
                     </a>
                     <a href="#">
                         <div class="item_lefpart">
-                            <span>Бизнес-книги</span>
+                            <span>Business books</span>
                             <span>7 216</span>
                         </div>
                     </a>
                     <a href="#">
                         <div class="item_lefpart">
-                            <span>Бизнес-книги</span>
+                            <span>Business books</span>
                             <span>7 216</span>
                         </div>
                     </a>
                     <a href="#">
                         <div class="item_lefpart">
-                            <span>Бизнес-книги</span>
+                            <span>Business books</span>
                             <span>7 216</span>
                         </div>
                     </a>   
 
                     <a href="#">
                         <div class="item_lefpart">
-                            <span>Бизнес-книги</span>
+                            <span>Business books</span>
                             <span>7 216</span>
                         </div>
                     </a>
                     <a href="#">
                         <div class="item_lefpart">
-                            <span>Бизнес-книги</span>
+                            <span>Business books</span>
                             <span>7 216</span>
                         </div>
                     </a>
                     <a href="#">
                         <div class="item_lefpart">
-                            <span>Бизнес-книги</span>
+                            <span>Business books</span>
                             <span>7 216</span>
                         </div>
                     </a>
                     <a href="#">
                         <div class="item_lefpart">
-                            <span>Бизнес-книги</span>
+                            <span>Business books</span>
                             <span>7 216</span>
                         </div>
                     </a> 
 
                     <a href="#">
                         <div class="item_lefpart">
-                            <span>Бизнес-книги</span>
+                            <span>Business books</span>
                             <span>7 216</span>
                         </div>
                     </a>
                     <a href="#">
                         <div class="item_lefpart">
-                            <span>Бизнес-книги</span>
+                            <span>Business books</span>
                             <span>7 216</span>
                         </div>
                     </a>
                     <a href="#">
                         <div class="item_lefpart">
-                            <span>Бизнес-книги</span>
+                            <span>Business books</span>
                             <span>7 216</span>
                         </div>
                     </a>
                     <a href="#">
                         <div class="item_lefpart">
-                            <span>Бизнес-книги</span>
+                            <span>Business books</span>
                             <span>7 216</span>
                         </div>
                     </a>    
                     <a href="#">
                         <div class="item_lefpart">
-                            <span>Бизнес-книги</span>
+                            <span>Business books</span>
                             <span>7 216</span>
                         </div>
                     </a>
                     <a href="#">
                         <div class="item_lefpart">
-                            <span>Бизнес-книги</span>
+                            <span>Business books</span>
                             <span>7 216</span>
                         </div>
                     </a>
                     <a href="#">
                         <div class="item_lefpart">
-                            <span>Бизнес-книги</span>
+                            <span>Business books</span>
                             <span>7 216</span>
                         </div>
                     </a>
                     <a href="#">
                         <div class="item_lefpart">
-                            <span>Бизнес-книги</span>
+                            <span>Business books</span>
                             <span>7 216</span>
                         </div>
                     </a>   
 
                     <a href="#">
                         <div class="item_lefpart">
-                            <span>Бизнес-книги</span>
+                            <span>Business books</span>
                             <span>7 216</span>
                         </div>
                     </a>
                     <a href="#">
                         <div class="item_lefpart">
-                            <span>Бизнес-книги</span>
+                            <span>Business books</span>
                             <span>7 216</span>
                         </div>
                     </a>
                     <a href="#">
                         <div class="item_lefpart">
-                            <span>Бизнес-книги</span>
+                            <span>Business books</span>
                             <span>7 216</span>
                         </div>
                     </a>
                     <a href="#">
                         <div class="item_lefpart">
-                            <span>Бизнес-книги</span>
+                            <span>Business books</span>
                             <span>7 216</span>
                         </div>
                     </a>
@@ -271,11 +270,11 @@
                     <div class="nameList">
                         <div class="nameList2">
                             <div class="location">
-                                <span>Все книги</span> 
-                                <p class="inf">181 000 книг</p>  
+                                <span>All books</span> 
+                                <p class="inf">181 000 books</p>  
                             </div>
                             <div class="location">
-                                <h5><a href="#">Все книги ></a></h5>
+                                <h5><a href="#">All books ></a></h5>
                             </div>
                         </div>
                         
@@ -357,52 +356,53 @@
                 </div>
 
                 <div class="Text_Container">
-            <h2 class="main_paragraph">О каталоге книг</h2>
+            <h2 class="main_paragraph">About the catalog of books</h2>
             <article class="Text_arcticle width_article">
                 <section class="Text_section">
                     <p class="text">
-                        Каждый день в библиотеку LibBook поступают новинки. Это книги и аудиокниги
-                        всех жанров: классика и современная литература, переиздания и новые 
-                        произведения популярных авторов. Наш каталог — это ветвистое дерево. 
-                        Детективы, любовные романы, фэнтези, фантастика, научно-популярные и 
-                        бизнес-книги — самые популярные жанры. Каждый раздел содержит в себе 
-                        несколько категорий, которые распределяют произведения по темам и уточняют 
-                        поиск нужных книг.
+                        Every day, new items arrive at the LibBook library. 
+                        These are books and audiobooks.of all genres: classic and modern literature, reprints and 
+                        new works of popular authors. Our catalog is a branchy tree. 
+                        Detectives, love stories, fantasy, science fiction, non-fiction and
+                        Business books are the most popular genres. Each section contains
+                        several categories that distribute works by topics and clarify
+                        search for the right books.
                     </p>
 
                     <p class="text">
-                        В разделе современной прозы вы встретите Несбё и Акунина, Барнса и Токареву, 
-                        Пелевина и Сорокина — весь спектр писателей, которые создают литературу 
-                        сегодня. Шедевры Достоевского, Толстого, Бунина и Куприна — в разделе 
-                        классической литературы. Многие из классических романов и рассказов можно 
-                        читать бесплатно.
+                        In the section of modern prose you will meet Nesbyo and Akunin, Barnes and Tokarev,
+                        Pelevin and Sorokina - the whole range of writers who create literature
+                        Today. Masterpieces of Dostoevsky, Tolstoy, Bunin and Kuprin - in the section
+                        classic literature. Many of the classic novels and short stories can
+                        read for free
                     </p>
 
-                    <p class="text">
-                        Если у вас есть вопросы к самому себе, если вы хотите измениться или наладить 
-                        отношения с близкими — обратитесь к книгам по психологии. Тысячи читателей 
-                        ежедневно находят в них информацию, которая помогает улучшить качество жизни.
-                        Читать эти электронные книги удобно в любой ситуации, отмечая полезные мысли 
-                        и возвращаясь к главному в своих заметках.
+                    <p class="text">  
+                        If you have questions to yourself, if you want to change or adjust
+                        relationship with loved ones - refer to books on psychology. Thousands of readers
+                        Every day they find information that helps to improve the quality of life.
+                        It is convenient to read these e-books in any situation, noting useful thoughts.
+                        and going back to the point in his notes.
                     </p>
                 </section>  
 
                 <section class="Text_section">
                     <p class="text">
-                        О том, как привести дела в порядок, все успевать, запоминать важное, 
-                        презентовать и продавать, планировать и считать, рассказывают книги лучших 
-                        российских издательств деловой литературы: «Манн, Иванов и Фербер», «Альпина 
-                        Паблишер», «Эксмо», «Олимп-Бизнес», «Питер». Эти книги помогают улучшить 
-                        личную эффективность и работу всего коллектива.
+                        About how to put things in order, all in time, remember important,
+                        present and sell, plan and count, tell the best books
+                        Russian business publishing houses: Mann, Ivanov and Ferber, Alpina
+                        Publisher "," Eksmo "," Olimp-Business "," Peter ". These books help improve
+                        personal effectiveness and the work of the whole team.                  
+
                     </p>    
 
-                    <p class="text">
-                        Что почитать, чтобы развлечься? Заходите в раздел детективов, любовных 
-                        романов,фантастики и фэнтези. Там вы найдете новинки и классику любимых 
-                        жанров. В LibBook каждый сможет выбрать книгу по душе, даже ребенок. 
-                        Сказки, повести, обучающие пособия и поучительные рассказы подойдут для 
-                        чтения в кругу семьи. Вы можете читать и слушать книги онлайн на сайте 
-                        или в мобильном приложении даже без интернета.
+                    <p class="text">      
+                        What to read to have fun? Go to the section of detectives, love
+                        novels, fiction and fantasy. There you will find new items and classics favorite
+                        genres. In the LibBook, everyone can choose a book they like, even a child.
+                        Fairy tales, tales, teaching aids and instructive stories are suitable for
+                        reading with family. You can read and listen to books online on the site.
+                        or in a mobile application, even without the Internet.
                     </p>
                 </section>
             </article>
@@ -414,20 +414,20 @@
     <footer>
         <div class="footer container">
             <div class="project">
-                <p class="bold">О проекте Library</p>
-                <a href="#"><li>О проекте</li></a>
-                <a href="#"><li>Условия использования</li></a>
-                <a href="#"><li>Политика конфиденциальности</li></a>
+                <p class="bold">About project of Library</p>
+                <a href="#"><li>About project</li></a>
+                <a href="#"><li>Terms of Use</li></a>
+                <a href="#"><li>Privacy policy</li></a>
             </div>
 
             <div class="application">
-                <p class="bold">Скачать приложение</p>
+                <p class="bold">Download application</p>
                 <a href="#"><i class="fab fa-android"></i></a>
                 <a href="#"><i class="fab fa-apple"></i></a>
             </div>
 
             <div class="news">
-                <p class="bold">Следите за новостями</p>
+                <p class="bold">Follow the news</p>
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-vk"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -436,7 +436,7 @@
             </div>
 
             <div class="support">
-                <p class="bold">Служба поддержки</p>
+                <p class="bold">Support</p>
                 <div class="phone_field">
                     <p>8-800-333-27-37</p>
                 </div>
