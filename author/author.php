@@ -1,10 +1,32 @@
+<?php
+
+    session_start();
+
+    require "../database/connection.php";
+    $link = ConnectionDB();
+
+    $id = $_REQUEST['id_author'];
+
+    $query = "SELECT * FROM 
+                    (SELECT * FROM author JOIN information_author on author.id = information_author.id_author) AS INFORMATION
+              WHERE author.id = $id";
+
+    $result = mysqli_query($link, $query);  
+
+    $author_information = mysqli_fetch_array($result);
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Электронная библиотека</title>
+    <title>E-Library</title>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/main.css">
@@ -38,15 +60,15 @@
     
                     <div class="header_menu">
                         <ul class="menu_list">
-                            <a href="dashboard.php"><li class="menu_item">Что почитать</li></a>
-                            <a href="../Lib/Library.php"><li class="menu_item">Библиотека</li></a>    
+                            <a href="dashboard.php"><li class="menu_item">What to read</li></a>
+                            <a href="../Lib/Library.php"><li class="menu_item">Library</li></a>    
                         </ul>
                     </div>
                 </div> 
 
                 <div class="auth">
-                    <a href="#" class="log_in">Войти |</a>
-                    <a href="#" class="sign_in">Зарегистрироваться</a>
+                    <a href="#" class="log_in">Sign in |</a>
+                    <a href="#" class="sign_in">Sing up</a>
                 </div>
 
             </div>
@@ -69,30 +91,19 @@
 
     <div class="author container">
         <div class="author_img">
-            <img src="../img/author_img/260c14aa-016b-4134-91dc-56a272e0251f.png" height="128" alt="">
+            <?php 
+                if($author_information['img'] == ""){
+                    $img = "../img/author_img/default_author.png";
+                }else{$img = "../" . $author_information['img'];}
+            ?>
+            <img src="<?php echo $img;?>" height="128" alt="">
         </div>
         
         <div class="author_information">
-            <h1 class="name_author">Виктор Пелевин</h1>
+            <h1 class="name_author"><?php echo $author_information['FIO'];?></h1>
             <div class="about_author">
                 <h3 class="about">Об авторе</h3>
-                <p class="text">
-                        Детство Виктора Пелевина прошло в Москве. Ему легко давались языки, но
-                        он пошел в энергетический институт. Позже он решил освоить литературу и 
-                        поступил в литинститут, но особой пользы, помимо знакомства с несколькими 
-                        литераторами, не получил. После учебы Пелевин стал работать в издательстве 
-                        своих друзей, а потом стал писать для популярных журналов и делать переводы. 
-                        Так ему легко удалось опубликовать свой первый рассказ «Колдун Игнат и люди».
-
-                        Сегодня автор известен провокационными книгами «Generation "П"», «Empire V», 
-                        «Любовь к трем цукербринам», «Лампа Мафусаила, или Борьба чекистов с масонами» 
-                        другими. На данный момент опубликовано более 80 работ Пелевина, включая повести
-                        и рассказы. По его произведениям неоднократно ставили спектакли и снимали 
-                        кино. Сам писатель получил 16 престижных наград. Основное отличие Пелевина 
-                        от большинства современных авторов — в сочетании элементов сюрреализма с 
-                        аллюзиями на современные события. В его книгах используются различные 
-                        философские концепции с отсылками к буддизму и постмодерну.
-                </p>
+                <p class="text"><?php echo $author_information['about_author'];?></p>
             </div>
         </div>   
     </div>

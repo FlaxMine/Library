@@ -13,11 +13,7 @@
     while($myrow = mysqli_fetch_array($result)){
         $books[] =  $myrow;
     };
-
-    $a=0;
 ?>
-
-
 
 
 <!DOCTYPE html>
