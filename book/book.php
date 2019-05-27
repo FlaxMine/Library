@@ -12,7 +12,14 @@
                 WHERE id=$id";
     $result = mysqli_query($link, $query);
 
-    $detailed_information = mysqli_fetch_array($result)
+    $detailed_information = mysqli_fetch_array($result);
+
+    $query2 = "SELECT * FROM 
+                        (SELECT * FROM book JOIN author on author.id_author=book.id) AS HELLO2
+                WHERE id=$id";
+    $result2 = mysqli_query($link, $query2);
+
+    $name_author = mysqli_fetch_array($result2);
 
 ?>
 
@@ -80,10 +87,10 @@
                 <a href="#"><span class="image_arrow"> <i class="fas fa-chevron-right"></i> &nbsp;Library</span></a>
             </li>
             <li class="item_menu">
-                <a href="../author/author.html"><span class="image_arrow"> <i class="fas fa-chevron-right"></i> &nbsp;Алексей Благирев</span></a>
+                <a href="../author/author.html"><span class="image_arrow"> <i class="fas fa-chevron-right"></i> &nbsp;<?php echo $name_author['FIO'];?></span></a>
             </li>
             <li class="item_menu">
-                <a href="#"><span class="image_arrow"> <i class="fas fa-chevron-right"></i> &nbsp;Big data простым языком</span></a>
+                <a href="#"><span class="image_arrow"> <i class="fas fa-chevron-right"></i> &nbsp;<?php echo $detailed_information['name'];?></span></a>
             </li>
         </ul>
     </div>
