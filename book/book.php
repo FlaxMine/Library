@@ -54,7 +54,7 @@
                 <div class="header">
 
                     <div class="logo">
-                        <a href="../index.php"><img src="../img//logo/Logo.PNG" alt=""></a>
+                        <a href="../index.php"><img src="../img/logo/Logo.PNG" alt=""></a>
                     </div>
     
                     <div class="search">
@@ -63,15 +63,27 @@
     
                     <div class="header_menu">
                         <ul class="menu_list">
-                            <a href="dashboard.php"><li class="menu_item">What to read</li></a>
-                            <a href="../Lib/Library.php"><li class="menu_item">Library</li></a>    
+                            <a href="../dashboard/dashboard.php"><li class="menu_item">What to read</li></a>
+                            <a href="../Lib/Library.php"><li class="menu_item">Library</li></a>   
                         </ul>
                     </div>
                 </div> 
 
                 <div class="auth">
-                    <a href="../authorization/auth.php" class="log_in">Sign in |</a>
-                    <a href="../registration/registration.php" class="sign_in">Sign up</a>
+                    <?php
+                        if(empty($_SESSION['logged_user'])){
+                    ?>
+                        <a href="../authorization/auth.php" class="log_in">Sign in |</a>
+                        <a href="../registration/registration.php" class="sign_in">Sing up</a>
+                    <?php
+                        }
+                        else{
+                    ?>
+                        <span class="logged_user"><?php echo $_SESSION['logged_user']; ?><a href="../logout/logout.php"> | Выйти</a></span>
+                    <?php
+                        }
+                    ?>
+                    
                 </div>
 
             </div>
