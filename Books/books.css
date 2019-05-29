@@ -1,0 +1,16 @@
+.head{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 40px;
+} 
+
+.backRow{
+    margin-right: 50px;
+    font-size: 20px;
+}
+
+.backRow a{
+    text-decoration: none;
+    color: #be5b04;
+}

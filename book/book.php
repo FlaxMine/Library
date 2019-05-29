@@ -84,7 +84,7 @@
                 <a href="#">LibBook <i class="fas fa-minus"></i> &nbsp;E-Library</a>
             </li>
             <li class="item_menu">
-                <a href="#"><span class="image_arrow"> <i class="fas fa-chevron-right"></i> &nbsp;Library</span></a>
+                <a href="../Lib/Library.php"><span class="image_arrow"> <i class="fas fa-chevron-right"></i> &nbsp;Library</span></a>
             </li>
             <li class="item_menu">
                 <a href="../author/author.php?id_author=<?php echo $name_author['id_author'];?>"><span class="image_arrow"> <i class="fas fa-chevron-right"></i> &nbsp;<?php echo $name_author['FIO'];?></span></a>

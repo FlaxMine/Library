@@ -148,7 +148,7 @@
                 <?php
                     for($i = 0; $i < count($quantity_books_by_genres); $i++){
                 ?>
-                    <a href="#">
+                    <a href="../Books/books.php?genre=<?php echo $all_id_genre[$i]['genre'];?>">
                         <div class="item_lefpart">
                             <span><?php echo $all_id_genre[$i]['genre'];?></span>
                             <span><?php echo $quantity_books_by_genres[$i]['quantity'];?></span>

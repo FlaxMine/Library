@@ -2,12 +2,12 @@
 
     function getBooks($link, $genre){
 
-        $query_get_id_genre = "SELECT id_genre FROM genre WHERE genre='$genre'";
+        $query_get_id_genre = "SELECT id FROM genre WHERE genre='$genre'";
 
         $result_genre = mysqli_query($link, $query_get_id_genre);
         $id_genre = mysqli_fetch_array($result_genre);
 
-        $id = $id_genre['id_genre'];
+        $id = $id_genre['id'];
 
         $query = "SELECT * FROM author JOIN 
                     (SELECT * FROM book JOIN 
