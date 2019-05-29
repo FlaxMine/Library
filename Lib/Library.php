@@ -1,3 +1,39 @@
+<?php
+
+    session_start();
+
+    require "../database/connection.php";
+    $link = ConnectionDB();
+
+
+    $query_quantity_genres = "SELECT COUNT(genre) AS quantity_genres FROM genre";
+    $result_quantity_genres = mysqli_query($link, $query_quantity_genres); 
+
+    $quantity_genres = mysqli_fetch_array($result_quantity_genres);
+
+    $query_genres = "SELECT * FROM genre";
+    $result_query_genres= mysqli_query($link, $query_genres); 
+
+    $all_id_genre = array();
+
+    while($id_genre = mysqli_fetch_array($result_query_genres)){
+        $all_id_genre[] = $id_genre;
+    };
+
+    $quantity_books_by_genres = array();
+
+    for($i = 0; $i < count($all_id_genre); $i++){
+
+        $id = $all_id_genre[$i]['0'];
+        $query = "SELECT COUNT(id_book) AS quantity FROM (SELECT * FROM genre JOIN attribute on genre.id = attribute.id_genre) AS GENRES WHERE id_genre = $id";
+        $result = mysqli_query($link, $query); 
+        
+        $quantity_books_by_genres[] = mysqli_fetch_array($result);
+    }
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -106,162 +142,21 @@
         <div class="main_content container">
             <div class="left_part">
                 <div class="Genre">Genres</div>
-                <span class="quantity_genre">12 genres</span>
+                <span class="quantity_genre"><?php echo $quantity_genres['quantity_genres'];?> genres</span>
 
-                <div class="items_genre">                
+                <div class="items_genre">   
+                <?php
+                    for($i = 0; $i < count($quantity_books_by_genres); $i++){
+                ?>
                     <a href="#">
                         <div class="item_lefpart">
-                            <span>Business books</span>
-                            <span>7 216</span>
-                        </div>
-                    </a>  
-                    <a href="#">
-                        <div class="item_lefpart">
-                            <span>Business books</span>
-                            <span>7 216</span>
+                            <span><?php echo $all_id_genre[$i]['genre'];?></span>
+                            <span><?php echo $quantity_books_by_genres[$i]['quantity'];?></span>
                         </div>
                     </a>
-                    <a href="#">
-                        <div class="item_lefpart">
-                            <span>Business books</span>
-                            <span>7 216</span>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="item_lefpart">
-                            <span>Business books</span>
-                            <span>7 216</span>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="item_lefpart">
-                            <span>Business books</span>
-                            <span>7 216</span>
-                        </div>
-                    </a>    
-                    <a href="#">
-                        <div class="item_lefpart">
-                            <span>Business books</span>
-                            <span>7 216</span>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="item_lefpart">
-                            <span>Business books</span>
-                            <span>7 216</span>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="item_lefpart">
-                            <span>Business books</span>
-                            <span>7 216</span>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="item_lefpart">
-                            <span>Business books</span>
-                            <span>7 216</span>
-                        </div>
-                    </a>   
-
-                    <a href="#">
-                        <div class="item_lefpart">
-                            <span>Business books</span>
-                            <span>7 216</span>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="item_lefpart">
-                            <span>Business books</span>
-                            <span>7 216</span>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="item_lefpart">
-                            <span>Business books</span>
-                            <span>7 216</span>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="item_lefpart">
-                            <span>Business books</span>
-                            <span>7 216</span>
-                        </div>
-                    </a> 
-
-                    <a href="#">
-                        <div class="item_lefpart">
-                            <span>Business books</span>
-                            <span>7 216</span>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="item_lefpart">
-                            <span>Business books</span>
-                            <span>7 216</span>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="item_lefpart">
-                            <span>Business books</span>
-                            <span>7 216</span>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="item_lefpart">
-                            <span>Business books</span>
-                            <span>7 216</span>
-                        </div>
-                    </a>    
-                    <a href="#">
-                        <div class="item_lefpart">
-                            <span>Business books</span>
-                            <span>7 216</span>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="item_lefpart">
-                            <span>Business books</span>
-                            <span>7 216</span>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="item_lefpart">
-                            <span>Business books</span>
-                            <span>7 216</span>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="item_lefpart">
-                            <span>Business books</span>
-                            <span>7 216</span>
-                        </div>
-                    </a>   
-
-                    <a href="#">
-                        <div class="item_lefpart">
-                            <span>Business books</span>
-                            <span>7 216</span>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="item_lefpart">
-                            <span>Business books</span>
-                            <span>7 216</span>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="item_lefpart">
-                            <span>Business books</span>
-                            <span>7 216</span>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="item_lefpart">
-                            <span>Business books</span>
-                            <span>7 216</span>
-                        </div>
-                    </a>
+                <?php
+                    }
+                ?>       
                 </div>         
             </div>
 
@@ -276,9 +171,7 @@
                             <div class="location">
                                 <h5><a href="#">All books ></a></h5>
                             </div>
-                        </div>
-                        
-                                                      
+                        </div>                                
                     </div>
                     <div class="Items">
                         <div class="bookItem">

@@ -7,13 +7,14 @@
 
     $id = $_REQUEST['id_author'];
 
-    $query = "SELECT * FROM 
-                    (SELECT * FROM author JOIN information_author on author.id = information_author.id_author) AS INFORMATION
-              WHERE author.id = $id";
+    $query = "SELECT * FROM author WHERE id_author = $id";
+    $query2 = "SELECT * FROM information_author WHERE id_author = $id";
 
     $result = mysqli_query($link, $query);  
+    $result2 = mysqli_query($link, $query2);
 
-    $author_information = mysqli_fetch_array($result);
+    $author = mysqli_fetch_array($result);
+    $author_information = mysqli_fetch_array($result2);
 
 ?>
 
@@ -78,13 +79,13 @@
     <div class="menu container">
         <ul class="items_menu">
             <li class="item_menu">
-                <a href="#">LibBook <i class="fas fa-minus"></i> &nbsp;Электронная библиотека</a>
+                <a href="#">LibBook <i class="fas fa-minus"></i> &nbsp;E-library</a>
             </li>
             <li class="item_menu">
-                <a href="#"><span class="image_arrow"> <i class="fas fa-chevron-right"></i> &nbsp;Библиотека</span></a>
+                <a href="../Lib/Library.php"><span class="image_arrow"> <i class="fas fa-chevron-right"></i> &nbsp;Library</span></a>
             </li>
             <li class="item_menu">
-                <a href="../author/author.html"><span class="image_arrow"> <i class="fas fa-chevron-right"></i> &nbsp;Алексей Благирев</span></a>
+                <span class="menu_name_author"><i class="fas fa-chevron-right"></i> &nbsp;<?php echo $author['FIO'];?></span>
             </li>
         </ul>
     </div>
@@ -100,7 +101,7 @@
         </div>
         
         <div class="author_information">
-            <h1 class="name_author"><?php echo $author_information['FIO'];?></h1>
+            <h1 class="name_author"><?php echo $author['FIO'];?></h1>
             <div class="about_author">
                 <h3 class="about">Об авторе</h3>
                 <p class="text"><?php echo $author_information['about_author'];?></p>

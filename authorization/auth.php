@@ -24,13 +24,10 @@
                     }                 
                 }
                 else{
-                    $errors[] = 'Логин или пароль введен неверно!';
+                    $errors[] = 'Login or password is incorrect!';
                 }
             }
-            else{
-                $errors[] = 'Пользователь с таким email не существует!';
-            }
-        }else{$errors[] = 'Заполните поля';}        
+        }else{$errors[] = 'Fill the fields';}        
     }
 ?>
 
