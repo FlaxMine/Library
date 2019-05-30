@@ -166,7 +166,7 @@
                                     ?>
                                        <div class="admin_buttons">
                                             <div class="delete_button">
-                                                <input class="button_admin" type="submit" name="do_delete" value="Delete">
+                                                <a href="admin/delete.php?id=<?php echo $books[$i]['id'];?>"><input class="button_admin" type="submit" name="do_delete" value="Delete"></a>
                                             </div>
 
                                             <div class="update_button">

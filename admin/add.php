@@ -147,7 +147,7 @@
     <div class="admin container">
 
         <div class="photo_load">
-            <form enctype="multipart/form-data" multipart="" action="adminEdit.php" method="POST"> 
+            <form enctype="multipart/form-data" multipart="" action="add.php" method="POST"> 
                 <div class="picture">
                     <input name="picture[]" type="file" multiple />
                 </div>
@@ -164,7 +164,7 @@
             </div>
         </div><br>
 
-        <form action="adminEdit.php" method="POST">
+        <form action="add.php" method="POST">
             <div class="admin_edit">
                 <div class="nameBook">
                     <input type="text" class="input_search" name="nameBook" placeholder="NameBook">                   
