@@ -64,27 +64,27 @@
         </div>
         <form action="registration.php" method="POST">
             <div class="name">
-                <input type="text" name="name" placeholder="Name" value = "<?php echo @$data['name'];?>">
+                <input type="text" class="input_search" name="name" placeholder="Name" value = "<?php echo @$data['name'];?>">
                 <?php  if(!empty($errors)) { echo '<div style="color: red">'.$errors[3].'</div>';} ?> 
             </div>
 
              <div class="fam">
-                <input type="text" name="fam" placeholder="Familia" value = "<?php echo @$data['fam'];?>">
+                <input type="text" class="input_search" name="fam" placeholder="Familia" value = "<?php echo @$data['fam'];?>">
                 <?php  if(!empty($errors)) { echo '<div style="color: red">'.$errors[4].'</div>';} ?>
             </div>
 
              <div class="email">
-                <input type="text" name="email" placeholder="Email" value="<?php echo @$data['email'];?>">
+                <input type="text" class="input_search" name="email" placeholder="Email" value="<?php echo @$data['email'];?>">
                 <?php  if(!empty($errors)) { echo '<div style="color: red>'.$errors[0].'</div>';} ?>   
             </div>
 
              <div class="password">
-                <input type="password" name="password" placeholder="Password">
+                <input type="password"  class="input_search" name="password" placeholder="Password">
                 <?php  if(!empty($errors)) { echo '<div style="color: red">'.$errors[1].'</div>';} ?>
             </div>
 
              <div class="password">
-                <input type="password" name="password_2" placeholder="Confirm password">
+                <input type="password" class="input_search" name="password_2" placeholder="Confirm password">
                 <?php  if(!empty($errors)) { echo '<div style="color: red">'.$errors[2].'</div>';} ?>
             </div>   
 

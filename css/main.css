@@ -30,7 +30,7 @@
 .logo{
     margin-right: 50px;
 }
-input{
+.input_search{
     height: 40px;
     padding: 2px 32px;
     background: #fff;
@@ -44,8 +44,40 @@ input{
     width: 250px;
 }
 
+.admin_buttons input{
+    width: 100%;
+    padding: 3px;
+    border-radius: 12px;
+    border: 1px solid #cecece;
+    color: #7c7f84; 
+    background: #fff;
+    margin-top: 3px;
+}
+
+.admin_buttons{
+    text-align: center;
+}
+
+.add_button{
+    margin-top: 50px;
+}
+
 .header_menu{
     margin-right: 55px;
+}
+
+.bookAdd{
+    background: #fff;
+    width: 50px;
+}
+
+.photo{
+    text-align: center;
+}
+
+.add{
+    margin-right: 5px;    
+    background: #fff;
 }
 
 .menu_list{

@@ -85,11 +85,11 @@
 
         <form method="POST">
             <div class="email">
-                <input type="text" name="email" placeholder="Email" value="<?php echo @$data['email'];?>">
+                <input type="text" class="input_search" name="email" placeholder="Email" value="<?php echo @$data['email'];?>">
             </div>
 
             <div class="password">
-                <input type="password" name="password" placeholder="Password">
+                <input type="password" class="input_search" name="password" placeholder="Password">
                 <?php  if(!empty($errors)) { echo '<div style="color: red">'.array_shift($errors).'</div>';} ?>
             </div>
 

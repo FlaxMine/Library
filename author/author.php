@@ -115,7 +115,7 @@
         <div class="author_information">
             <h1 class="name_author"><?php echo $author['FIO'];?></h1>
             <div class="about_author">
-                <h3 class="about">Об авторе</h3>
+                <h3 class="about">About author</h3>
                 <p class="text"><?php echo $author_information['about_author'];?></p>
             </div>
         </div>   

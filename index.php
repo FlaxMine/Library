@@ -136,6 +136,17 @@
                     </div>
                     <div class="box_slider">
                         <div class="Items">
+                        <?php 
+                            if(!empty($_SESSION['logged_user']) && $_SESSION['logged_user'] == "admin@gmail.com"){
+                        ?>
+                            <div class="bookAdd">
+                                <div class="photo">
+                                    <a href="admin/adminEdit.php"><img src="img/plus.jpg" width="124" height="196"></i></a>
+                                </div>
+                            </div>
+                        <?php       
+                            }
+                        ?>
                             <?php
                                 for($i = 0; $i < count($books); $i++){
                             ?>
@@ -149,11 +160,26 @@
                                     <div class="autor repeat">
                                         <span class="repeat"><?php echo $books[$i]['FIO'];?></span>
                                     </div>
-                                </div>  
+
+                                    <?php 
+                                        if(!empty($_SESSION['logged_user']) && $_SESSION['logged_user'] == "admin@gmail.com"){
+                                    ?>
+                                       <div class="admin_buttons">
+                                            <div class="delete_button">
+                                                <input class="button_admin" type="submit" name="do_delete" value="Delete">
+                                            </div>
+
+                                            <div class="update_button">
+                                                <input class="button_admin" type="submit" name="do_update" value="Update">
+                                            </div>
+                                        </div>
+                                    <?php
+                                        }
+                                    ?>
+                                    </div>                                            
                             <?php
                                 }
-                            ?>
-                             
+                            ?>    
                         </div> 
                     </div>
                 </div>
@@ -164,6 +190,18 @@
                         <p class="inf">Native classics and time-tested bestsellers are always free</p>           
                     </div>
                     <div class="Items">
+                        <?php 
+                            if(!empty($_SESSION['logged_user']) && $_SESSION['logged_user'] == "admin@gmail.com"){
+                        ?>
+                            <div class="bookAdd">
+                                <div class="photo">
+                                    <a href="admin/adminEdit.php"><img src="img/plus.jpg" width="124" height="196"></i></a>
+                                </div>
+                            </div>
+                        <?php       
+                            }
+                        ?>
+                            
                         <?php
                             for($i = 0; $i < count($books); $i++){
                         ?>
@@ -179,6 +217,21 @@
                                         <span class="repeat"><?php echo $books[$i]['FIO'];?></span>
                                     </div>
                                 </div>  
+                                <?php 
+                                   if(!empty($_SESSION['logged_user']) && $_SESSION['logged_user'] == "admin@gmail.com"){
+                                ?>
+                                    <div class="admin_buttons">
+                                        <div class="delete_button">
+                                            <input class="button_admin" type="submit" name="do_delete" value="Delete">
+                                        </div>
+
+                                        <div class="update_button">
+                                            <input class="button_admin" type="submit" name="do_update" value="Update">
+                                        </div>
+                                    </div>
+                                <?php
+                                    }
+                                ?>
                             </div>
                         <?php
                             }

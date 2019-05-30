@@ -1,0 +1,19 @@
+.admin{
+    text-align: center;
+}
+
+.admin input{
+    margin-top: 10px;
+}
+
+.admin_edit p{
+    background: #f7f7f7;
+    margin-top: 10px;
+}
+
+textarea{
+    background: #fff;
+    border-radius: 12px;
+    width: 315px;
+    margin-top: 5px;
+}

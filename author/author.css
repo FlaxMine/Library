@@ -36,3 +36,7 @@ h3{
     font-size: 12px;
     
 }
+
+.author_img img{
+    border-radius: 12px;
+}
