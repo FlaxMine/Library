@@ -23,8 +23,8 @@
 
                     $time = time();
         
-                    if(move_uploaded_file($tmp_name_1, "../img/book/$time" .$name_file_1) 
-                                    && move_uploaded_file($tmp_name_0, "../img/author_img/$time" .$name_file_0)){
+                    if(move_uploaded_file($tmp_name_1, "../img/author_img/$time" .$name_file_1) 
+                                    && move_uploaded_file($tmp_name_0, "../img/book/$time" .$name_file_0)){
                         $succesfull = "Files was uploaded successfully!";
                     }
                     else { $errors = "Error loading!";}
@@ -108,7 +108,7 @@
                 <div class="header">
 
                     <div class="logo">
-                        <a href="index.php"><img src="../img/logo/Logo.PNG" alt=""></a>
+                        <a href="../index.php"><img src="../img/logo/Logo.PNG" alt=""></a>
                     </div>
     
                     <div class="search">
@@ -117,8 +117,8 @@
     
                     <div class="header_menu">
                         <ul class="menu_list">
-                            <a href="dashboard/dashboard.php"><li class="menu_item">What to read</li></a>
-                            <a href="Lib/Library.php"><li class="menu_item">Library</li></a>   
+                            <a href="../dashboard/dashboard.php"><li class="menu_item">What to read</li></a>
+                            <a href="../Lib/Library.php"><li class="menu_item">Library</li></a>   
                         </ul>
                     </div>
                 </div> 
@@ -127,8 +127,8 @@
                     <?php
                         if(empty($_SESSION['logged_user'])){
                     ?>
-                        <a href="authorization/auth.php" class="log_in">Sign in |</a>
-                        <a href="registration/registration.php" class="sign_in">Sing up</a>
+                        <a href="../authorization/auth.php" class="log_in">Sign in |</a>
+                        <a href="../registration/registration.php" class="sign_in">Sing up</a>
                     <?php
                         }
                         else{
@@ -196,16 +196,16 @@
 
                 <div class="AuthorImg">
                     <?php 
-                        $file_name = empty($_FILES['picture']['name'][0]) ? "" : $time .$_FILES['picture']['name'][0];
+                        $file_name = empty($_FILES['picture']['name'][1]) ? "" : $time .$_FILES['picture']['name'][1];
                     ?>
-                    <input type="hidden" class="input_search" name="AuthorImg" placeholder="AuthorImg" value="img/book/<?php echo $file_name; ?>">
+                    <input type="hidden" class="input_search" name="AuthorImg" placeholder="AuthorImg" value="img/author_img/<?php echo $file_name; ?>">
                 </div>
 
                 <div class="BookImg">
                     <?php 
-                        $file_name_2 = empty($_FILES['picture']['name'][1]) ? "" : $time .$_FILES['picture']['name'][1];
+                        $file_name_2 = empty($_FILES['picture']['name'][0]) ? "" : $time .$_FILES['picture']['name'][0];
                     ?>
-                    <input type="hidden" class="input_search" name="BookImg" placeholder="BookImg" value="img/author_img/<?php echo $file_name_2; ?>">
+                    <input type="hidden" class="input_search" name="BookImg" placeholder="BookImg" value="img/book/<?php echo $file_name_2; ?>">
                 </div>            
 
                 <div class="aboutBook">
