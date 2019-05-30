@@ -15,5 +15,14 @@ textarea{
     background: #fff;
     border-radius: 12px;
     width: 315px;
-    margin-top: 5px;
+    padding: 5px;
+}
+
+.add{
+    text-align: center;
+}
+
+.error{
+    color: red;
+    font-size: 12px;
 }

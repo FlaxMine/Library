@@ -2,8 +2,34 @@
 
     session_start();
 
-    if(isset($data['Download'])){
+    $errors = "";
+    $successfully = "";
 
+    if(isset($_REQUEST['Download'])){
+
+        if(!empty($_FILES['picture'])){
+            $types = array('image/png', 'image/jpeg', 'image/jpg');
+            if (in_array($_FILES['picture']['type'][0], $types) && in_array($_FILES['picture']['type'][1], $types)){
+                $max_size = 802400;
+                if ($_FILES['picture']['size'][0] < $max_size && $_FILES['picture']['size'][1] < $max_size){
+
+                    $tmp_name_0 = $_FILES['picture']['tmp_name'][0];
+                    $tmp_name_1 = $_FILES['picture']['tmp_name'][1];
+                    $name_file_0 = $_FILES['picture']['name'][0];
+                    $name_file_1 = $_FILES['picture']['name'][1];
+
+                    $time = time();
+        
+                    if(move_uploaded_file($tmp_name_0, "../img/book/$time" .$name_file_0) 
+                                    && move_uploaded_file($tmp_name_1, "../img/author_img/$time" .$name_file_1)){
+                        $successfully = "Files was uploaded successfully!";
+                    }
+                    else { $errors = "Error loading!";}
+                }
+                else { $errors = "File size too large!"; }
+            }
+            else { $errors = "Not valid file type!"; }       
+        }
     }
 ?>
 
@@ -18,6 +44,7 @@
 
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="../registration/reg.css">
 </head>
 <body>
     <header>
@@ -70,15 +97,22 @@
                     <input name="picture[]" type="file" multiple />
                 </div>
                 <div class="Download">
-                    <input type="submit" class="Download" name="Download" value="Download" />
-                </div>             
+                    <input type="submit" class="button" name="Download" value="Download" />   
+                </div>   
             </form>
+            <div class="error">
+                <?php 
+                    if(!empty($errors)){
+                        echo $errors;
+                    }else {echo $successfully; }
+                ?>
+            </div>
         </div><br>
 
         <form action="registration.php" method="POST">
             <div class="admin_edit">
                 <div class="nameBook">
-                    <input type="text" class="input_search" name="nameBook" placeholder="NameBook">
+                    <input type="text" class="input_search" name="nameBook" placeholder="NameBook">                   
                 </div>     
                 
                 <div class="authorBook">
@@ -103,16 +137,16 @@
 
                 <div class="aboutBook">
                     <p>About Book<Br>
-                    <textarea name="aboutBook" cols="40" rows="7"></textarea></p>
+                    <textarea name="aboutBook" cols="40" rows="10"></textarea></p>
                 </div>
 
                 <div class="aboutAuthor">
                     <p>About Author<Br>
-                    <textarea name="aboutAuthor" cols="40" rows="7"></textarea></p>
+                    <textarea name="aboutAuthor" cols="40" rows="10"></textarea></p>
                 </div>
 
                 <div class="Add">
-                    <input type="submit" class="input_search" name="QuantityPage" placeholder="QuantityPage">
+                    <input type="submit" class="button add" name="QuantityPage" placeholder="QuantityPage">
                 </div>
             </div>
         </form>
