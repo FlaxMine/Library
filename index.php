@@ -141,7 +141,7 @@
                         ?>
                             <div class="bookAdd">
                                 <div class="photo">
-                                    <a href="admin/adminEdit.php"><img src="img/plus.jpg" width="124" height="196"></i></a>
+                                    <a href="admin/add.php"><img src="img/plus.jpg" width="124" height="196"></i></a>
                                 </div>
                             </div>
                         <?php       
@@ -195,7 +195,7 @@
                         ?>
                             <div class="bookAdd">
                                 <div class="photo">
-                                    <a href="admin/adminEdit.php"><img src="img/plus.jpg" width="124" height="196"></i></a>
+                                    <a href="admin/add.php"><img src="img/plus.jpg" width="124" height="196"></i></a>
                                 </div>
                             </div>
                         <?php       
