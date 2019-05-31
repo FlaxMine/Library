@@ -39,21 +39,21 @@
 
     if(isset($_REQUEST['Insert'])){
 
-        $nameBook = $_REQUEST['nameBook'];
-        $aboutBook = $_REQUEST['aboutBook'];
+        $nameBook = ($_REQUEST['nameBook']);
+        $aboutBook = ($_REQUEST['aboutBook']);
         $BookImg = $_REQUEST['BookImg'];
 
-        $authorBook = $_REQUEST['authorBook'];
-        $authorYear = $_REQUEST['authorYear'];
+        $authorBook = ($_REQUEST['authorBook']);
+        $authorYear = intval($_REQUEST['authorYear']);
         $AuthorImg = $_REQUEST['AuthorImg'];
 
-        $aboutAuthor = $_REQUEST['aboutAuthor'];
+        $aboutAuthor = ($_REQUEST['aboutAuthor']);
 
-        $genreBook = $_REQUEST['genreBook'];
+        $genreBook = ($_REQUEST['genreBook']);
 
-        $DateWrite = $_REQUEST['DateWrite'];
-        $YearPublish = $_REQUEST['YearPublish'];
-        $QuantityPage = $_REQUEST['QuantityPage'];
+        $DateWrite = intval($_REQUEST['DateWrite']);
+        $YearPublish = intval($_REQUEST['YearPublish']);
+        $QuantityPage = intval($_REQUEST['QuantityPage']);
 
         $query_book = "INSERT INTO book (name, img) VALUES ('$nameBook', '$BookImg')";
         $query_author = "INSERT INTO author (FIO, year) VALUES ('$authorBook', '$authorYear')";
@@ -64,7 +64,7 @@
         $query_last_id = "SELECT MAX(id) as LastID FROM book";
         $result = mysqli_query($link, $query_last_id);
         $id_result = mysqli_fetch_array($result);
-        $id = $id_result['LastID'];
+        $id = intval($id_result['LastID']);
 
         $query_author_book = "INSERT INTO author_book (id_author, id_book) VALUES ('$id', '$id')";
         $result_query_author_book = mysqli_query($link, $query_author_book);
@@ -72,7 +72,7 @@
         $query_id_genre = "SELECT id FROM genre WHERE genre = '$genreBook'";
         $result_id_genre = mysqli_query($link, $query_id_genre);
         $id_genre = mysqli_fetch_array($result_id_genre);
-        $id2 = $id_genre['id'];
+        $id2 = intval($id_genre['id']);
 
         $query_attribute = "INSERT INTO attribute (id_genre, id_book) VALUES ('$id2', '$id')";
         $query_about_author = "INSERT INTO information_author (id_author, about_author, img) VALUES ('$id', '$aboutAuthor', '$AuthorImg')"; 

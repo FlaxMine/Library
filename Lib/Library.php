@@ -24,7 +24,7 @@
 
     for($i = 0; $i < count($all_id_genre); $i++){
 
-        $id = $all_id_genre[$i]['0'];
+        $id = intval($all_id_genre[$i]['0']);
         $query = "SELECT COUNT(id_book) AS quantity FROM (SELECT * FROM genre JOIN attribute on genre.id = attribute.id_genre) AS GENRES WHERE id_genre = $id";
         $result = mysqli_query($link, $query); 
         

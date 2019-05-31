@@ -37,22 +37,22 @@
 
     if(isset($_REQUEST['Update'])){
 
-        $id_book_field = $_REQUEST['id_book_field'];
-        $nameBook = $_REQUEST['nameBook'];
-        $aboutBook = $_REQUEST['aboutBook'];
+        $id_book_field = intval($_REQUEST['id_book_field']);
+        $nameBook = stripslashes($_REQUEST['nameBook']);
+        $aboutBook = stripslashes($_REQUEST['aboutBook']);
         //$BookImg = $_REQUEST['BookImg'];
 
-        $authorBook = $_REQUEST['authorBook'];
-        $authorYear = $_REQUEST['authorYear'];
+        $authorBook = stripslashes($_REQUEST['authorBook']);
+        $authorYear = intval($_REQUEST['authorYear']);
        //$AuthorImg = $_REQUEST['AuthorImg'];
 
-        $aboutAuthor = $_REQUEST['aboutAuthor'];
+        $aboutAuthor = stripslashes($_REQUEST['aboutAuthor']);
 
         $genreBook = $_REQUEST['genreBook'];
 
-        $DateWrite = $_REQUEST['DateWrite'];
-        $YearPublish = $_REQUEST['YearPublish'];
-        $QuantityPage = $_REQUEST['QuantityPage'];  
+        $DateWrite = intval($_REQUEST['DateWrite']);
+        $YearPublish = intval($_REQUEST['YearPublish']);
+        $QuantityPage = intval($_REQUEST['QuantityPage']);  
 
         $query_update_book = "UPDATE book SET name = '$nameBook' WHERE id=" .intval($id_book_field);
         $result_query_update_book = mysqli_query($link, $query_update_book);

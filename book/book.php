@@ -5,7 +5,7 @@
     require "../database/connection.php";
     $link = ConnectionDB();
 
-    $id = $_REQUEST['id'];
+    $id = intval($_REQUEST['id']);
 
     $query = "SELECT * FROM 
                         (SELECT * FROM detailed_information JOIN book on detailed_information.id_book=book.id) AS HELLO 

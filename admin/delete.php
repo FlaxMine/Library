@@ -4,7 +4,7 @@
     require "../database/connection.php";
     $link = ConnectionDB();
 
-    $id = $_REQUEST['id'];
+    $id = intval($_REQUEST['id']);
 
     $query_delete_book = "DELETE FROM book WHERE id = $id";
     $query_delete_author = "DELETE FROM author WHERE id_author = $id";

@@ -1,9 +1,9 @@
 <?php
 
-    $first_name = $_POST['name'];
-    $second_name = $_POST['fam'];
+    $first_name = mysql_real_escape_string($_POST['name']);
+    $second_name = mysql_real_escape_string($_POST['fam']);
 
-    $email = $_POST['email'];
+    $email = mysql_real_escape_string($_POST['email']);
     $email = trim($email);
 
     $password = $_POST['password'];

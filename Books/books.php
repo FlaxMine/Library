@@ -15,7 +15,7 @@
     $result = mysqli_query($link, $query);
 
     $id_genre = mysqli_fetch_array($result);
-    $id = $id_genre['id'];
+    $id = intval($id_genre['id']);
 
     $query_get_description_genre = "SELECT description FROM about_genre WHERE id_genre = $id";
     $result2 = mysqli_query($link, $query_get_description_genre);
