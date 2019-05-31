@@ -7,7 +7,7 @@
         $result_genre = mysqli_query($link, $query_get_id_genre);
         $id_genre = mysqli_fetch_array($result_genre);
 
-        $id = $id_genre['id'];
+        $id = intval($id_genre['id']);
 
         $query = "SELECT * FROM author JOIN 
                     (SELECT * FROM book JOIN 

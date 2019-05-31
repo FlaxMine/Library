@@ -5,37 +5,35 @@
     require "../database/connection.php";
     $link = ConnectionDB();
 
-     ///////////////////  GET INFORMATION FOR FIELDS ///////////////////
+    ///////////////////  GET INFORMATION FOR FIELDS ///////////////////
 
-    $id_book = empty($_REQUEST['id']) ? null : $_REQUEST['id'];
+    $id_book = empty($_REQUEST['id']) ? null : intval($_REQUEST['id']);
     if($id_book != NULL){
 
-        $query_get_id_genre = "SELECT id_genre FROM attribute WHERE id_book = $id_book";
+        $query_get_id_genre = "SELECT id_genre FROM attribute WHERE id_book =" .intval($id_book);
         $reuslt_get_id_genre = mysqli_query($link, $query_get_id_genre);
         $id_genre = mysqli_fetch_array($reuslt_get_id_genre);
         $id = $id_genre['id_genre'];
     
-        $query_get_genre = "SELECT genre FROM genre WHERE id=$id";
+        $query_get_genre = "SELECT genre FROM genre WHERE id=" .intval($id);
         $result_get_genre = mysqli_query($link, $query_get_genre);
         $genre_result = mysqli_fetch_array($result_get_genre);
         $genre = $genre_result['genre'];
     
-        $query_book_author = "SELECT * FROM (SELECT * FROM book JOIN author on book.id = author.id_author) AS book_author WHERE id=$id_book";
+        $query_book_author = "SELECT * FROM (SELECT * FROM book JOIN author on book.id = author.id_author) AS book_author WHERE id=" .intval($id_book);
         $result_query_book_author = mysqli_query($link, $query_book_author);
         $get_book_author = mysqli_fetch_array($result_query_book_author);
     
-        $query_about_author = "SELECT about_author FROM information_author WHERE id_author = $id_book";
+        $query_about_author = "SELECT about_author FROM information_author WHERE id_author =" .intval($id_book);
         $result_query_about_author = mysqli_query($link, $query_about_author);
         $get_about_author = mysqli_fetch_array($result_query_about_author);
     
-        $query_detailed_information = "SELECT * FROM detailed_information WHERE id_book = $id_book";
+        $query_detailed_information = "SELECT * FROM detailed_information WHERE id_book =" .intval($id_book);
         $result_query_detailed_information = mysqli_query($link, $query_detailed_information);
         $get_detailed_information = mysqli_fetch_array($result_query_detailed_information);
     }
 
     ///////////////////  EDIT INFORMATION ///////////////////
-
-
 
     if(isset($_REQUEST['Update'])){
 
@@ -56,20 +54,23 @@
         $YearPublish = $_REQUEST['YearPublish'];
         $QuantityPage = $_REQUEST['QuantityPage'];  
 
-        $query_update_book = "UPDATE book SET name = '$nameBook' WHERE id=$id_book_field";
+        $query_update_book = "UPDATE book SET name = '$nameBook' WHERE id=" .intval($id_book_field);
         $result_query_update_book = mysqli_query($link, $query_update_book);
 
-        $query_update_aboutAuthor = "UPDATE information_author SET about_author = '$aboutAuthor' WHERE id_author = $id_book_field";
+        $query_update_FIOAuthor = "UPDATE author SET FIO = '$authorBook' WHERE id_author=" .intval($id_book_field);
+        $result_query_update_FIOAuthor = mysqli_query($link, $query_update_FIOAuthor);
+
+        $query_update_aboutAuthor = "UPDATE information_author SET about_author = '$aboutAuthor' WHERE id_author=" . intval($id_book_field);
         $result_update_aboutAuthor = mysqli_query($link, $query_update_aboutAuthor);
 
         $query_detailed_information = "UPDATE detailed_information SET year_edition = '$YearPublish', year_write = '$DateWrite',
-                                            quantity_page = '$QuantityPage', description = '$aboutBook' WHERE id_book = $id_book_field";
+                                            quantity_page = '$QuantityPage', description = '$aboutBook' WHERE id_book =" .intval($id_book_field);
         $result_query_detailed_information = mysqli_query($link, $query_detailed_information);
 
         if($result_query_update_book){
             header("Location: ../index.php");
         }
-        else { header("Location: update.php?id=" .$id_book_field); }
+        else { header("Location: update.php?id=" .intval($id_book_field)); }
         
     }
 
@@ -164,7 +165,7 @@
                     </div>    
                     
                     <div class="QuantityPage">
-                        <input type="text" class="input_search" name="id_book_field" placeholder="id_book_field" value="<?php echo $id_book;?>">
+                        <input type="hidden" class="input_search" name="id_book_field" placeholder="id_book_field" value="<?php echo $id_book;?>">
                     </div> 
 
                     <div class="aboutBook">
