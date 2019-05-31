@@ -219,7 +219,7 @@
                 </div>
 
                 <div class="Add">
-                    <input type="submit" class="button add" name="Insert" placeholder="QuantityPage">
+                    <input type="submit" class="button add" name="Insert" placeholder="Insert" value="Insert">
                 </div>
             </div>
         </form>

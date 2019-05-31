@@ -170,7 +170,7 @@
                                             </div>
 
                                             <div class="update_button">
-                                                <input class="button_admin" type="submit" name="do_update" value="Update">
+                                                <a href="admin/update.php?id=<?php echo $books[$i]['id'];?>"><input class="button_admin" type="submit" name="do_update" value="Update"></a>
                                             </div>
                                         </div>
                                     <?php
@@ -226,7 +226,7 @@
                                         </div>
 
                                         <div class="update_button">
-                                            <input class="button_admin" type="submit" name="do_update" value="Update">
+                                            <a href="admin/update.php?id=<?php echo $books[$i]['id'];?>"><input class="button_admin" type="submit" name="do_update" value="Update"></a>
                                         </div>
                                     </div>
                                 <?php
