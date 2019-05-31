@@ -66,6 +66,9 @@
         $id_result = mysqli_fetch_array($result);
         $id = $id_result['LastID'];
 
+        $query_author_book = "INSERT INTO author_book (id_author, id_book) VALUES ('$id', '$id')";
+        $result_query_author_book = mysqli_query($link, $query_author_book);
+
         $query_id_genre = "SELECT id FROM genre WHERE genre = '$genreBook'";
         $result_id_genre = mysqli_query($link, $query_id_genre);
         $id_genre = mysqli_fetch_array($result_id_genre);
