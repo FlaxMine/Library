@@ -54,10 +54,17 @@
 
         $DateWrite = $_REQUEST['DateWrite'];
         $YearPublish = $_REQUEST['YearPublish'];
-        $QuantityPage = $_REQUEST['QuantityPage'];
+        $QuantityPage = $_REQUEST['QuantityPage'];  
 
         $query_update_book = "UPDATE book SET name = '$nameBook' WHERE id=$id_book_field";
         $result_query_update_book = mysqli_query($link, $query_update_book);
+
+        $query_update_aboutAuthor = "UPDATE information_author SET about_author = '$aboutAuthor' WHERE id_author = $id_book_field";
+        $result_update_aboutAuthor = mysqli_query($link, $query_update_aboutAuthor);
+
+        $query_detailed_information = "UPDATE detailed_information SET year_edition = '$YearPublish', year_write = '$DateWrite',
+                                            quantity_page = '$QuantityPage', description = '$aboutBook'";
+        $result_query_detailed_information = mysqli_query($link, $query_detailed_information);
 
         if($result_query_update_book){
             header("Location: ../index.php");
