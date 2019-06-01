@@ -83,25 +83,42 @@
                     <p class="repeat">Fantasy</p>
                     <span>Alternative history</span>
                 </div>
-                <div class="Items">
-                    <?php
-                        for($i = 0; $i < count($fantasy); $i++){
-                    ?>
-                        <div class="bookItem">
-                            <div class="photo">
-                                <a href="../book/book.php?id=<?php echo $fantasy[$i]['id'];?>"><img src="../<?php echo $fantasy[$i]['img'];?>" alt="" width="124" height="196"></a>
+                <div class="box_slider">
+                    <div class="Items">
+                        <?php
+                            for($i = 0; $i < count($fantasy); $i++){
+                        ?>
+                            <div class="bookItem">
+                                <div class="photo">
+                                    <a href="../book/book.php?id=<?php echo $fantasy[$i]['id'];?>"><img src="../<?php echo $fantasy[$i]['img'];?>" alt="" width="124" height="196"></a>
+                                </div>
+                                <div class="name repeat">
+                                    <span class="repeat"><?php echo $fantasy[$i]['name'];?></span>
+                                </div>
+                                <div class="autor repeat">
+                                    <span class="repeat"><?php echo $fantasy[$i]['FIO'];?></span>
+                                </div>
+                                <?php 
+                                    if(!empty($_SESSION['logged_user']) && $_SESSION['logged_user'] == "admin@gmail.com"){
+                                ?>
+                                    <div class="admin_buttons">
+                                        <div class="delete_button">
+                                            <a href="../admin/delete.php?id=<?php echo $fantasy[$i]['id'];?>"><input class="button_admin" type="submit" name="do_delete" value="Delete"></a>
+                                        </div>
+
+                                        <div class="update_button">
+                                            <a href="../admin/update.php?id=<?php echo $fantasy[$i]['id'];?>"><input class="button_admin" type="submit" name="do_update" value="Update"></a>
+                                        </div>
+                                    </div>
+                                <?php
+                                    }
+                                ?>
                             </div>
-                            <div class="name repeat">
-                                <span class="repeat"><?php echo $fantasy[$i]['name'];?></span>
-                            </div>
-                            <div class="autor repeat">
-                                <span class="repeat"><?php echo $fantasy[$i]['FIO'];?></span>
-                            </div>
-                        </div>
-                    <?php
-                        }
-                    ?>
-                </div> 
+                        <?php
+                            }
+                        ?>
+                    </div> 
+                </div>
             </div>
 
             <div class="ListBook">
@@ -109,25 +126,42 @@
                     <p class="repeat">Novelties, Psychology</p>
                     <span>Psychology: new genre</span>
                 </div>
-                <div class="Items">
-                    <?php
-                        for($i = 0; $i < count($psychology); $i++){
-                    ?>
-                        <div class="bookItem">
-                            <div class="photo">
-                                <a href="../book/book.php?id=<?php echo $psychology[$i]['id'];?>"><img src="../<?php echo $psychology[$i]['img'];?>" alt="" width="124" height="196"></a>
+                <div class="box_slider">
+                    <div class="Items">
+                        <?php
+                            for($i = 0; $i < count($psychology); $i++){
+                        ?>
+                            <div class="bookItem">
+                                <div class="photo">
+                                    <a href="../book/book.php?id=<?php echo $psychology[$i]['id'];?>"><img src="../<?php echo $psychology[$i]['img'];?>" alt="" width="124" height="196"></a>
+                                </div>
+                                <div class="name repeat">
+                                    <span class="repeat"><?php echo $psychology[$i]['name'];?></span>
+                                </div>
+                                <div class="autor repeat">
+                                    <span class="repeat"><?php echo $psychology[$i]['FIO'];?></span>
+                                </div>
+                                <?php 
+                                    if(!empty($_SESSION['logged_user']) && $_SESSION['logged_user'] == "admin@gmail.com"){
+                                ?>
+                                    <div class="admin_buttons">
+                                        <div class="delete_button">
+                                            <a href="../admin/delete.php?id=<?php echo $psychology[$i]['id'];?>"><input class="button_admin" type="submit" name="do_delete" value="Delete"></a>
+                                        </div>
+
+                                        <div class="update_button">
+                                            <a href="../admin/update.php?id=<?php echo $psychology[$i]['id'];?>"><input class="button_admin" type="submit" name="do_update" value="Update"></a>
+                                        </div>
+                                    </div>
+                                <?php
+                                    }
+                                ?>
                             </div>
-                            <div class="name repeat">
-                                <span class="repeat"><?php echo $psychology[$i]['name'];?></span>
-                            </div>
-                            <div class="autor repeat">
-                                <span class="repeat"><?php echo $psychology[$i]['FIO'];?></span>
-                            </div>
-                        </div>
-                    <?php
-                        }
-                    ?>
-                </div>  
+                        <?php
+                            }
+                        ?>
+                    </div>  
+                </div>
             </div>
 
             <div class="ListBook">
@@ -135,25 +169,42 @@
                     <p class="repeat">Computer literature</p>
                     <span>Database</span>
                 </div>
-                <div class="Items">
-                    <?php
-                        for($i = 0; $i < count($database); $i++){
-                    ?>
-                        <div class="bookItem">
-                            <div class="photo">
-                                <a href="../book/book.php?id=<?php echo $database[$i]['id'];?>"><img src="../<?php echo $database[$i]['img'];?>" alt="" width="124" height="196"></a>
+                <div class="box_slider">
+                    <div class="Items">
+                        <?php
+                            for($i = 0; $i < count($database); $i++){
+                        ?>
+                            <div class="bookItem">
+                                <div class="photo">
+                                    <a href="../book/book.php?id=<?php echo $database[$i]['id'];?>"><img src="../<?php echo $database[$i]['img'];?>" alt="" width="124" height="196"></a>
+                                </div>
+                                <div class="name repeat">
+                                    <span class="repeat"><?php echo $database[$i]['name'];?></span>
+                                </div>
+                                <div class="autor repeat">
+                                    <span class="repeat"><?php echo $database[$i]['FIO'];?></span>
+                                </div>
+                                <?php 
+                                    if(!empty($_SESSION['logged_user']) && $_SESSION['logged_user'] == "admin@gmail.com"){
+                                ?>
+                                    <div class="admin_buttons">
+                                        <div class="delete_button">
+                                            <a href="../admin/delete.php?id=<?php echo $database[$i]['id'];?>"><input class="button_admin" type="submit" name="do_delete" value="Delete"></a>
+                                        </div>
+
+                                        <div class="update_button">
+                                            <a href="../admin/update.php?id=<?php echo $database[$i]['id'];?>"><input class="button_admin" type="submit" name="do_update" value="Update"></a>
+                                        </div>
+                                    </div>
+                                <?php
+                                    }
+                                ?>
                             </div>
-                            <div class="name repeat">
-                                <span class="repeat"><?php echo $database[$i]['name'];?></span>
-                            </div>
-                            <div class="autor repeat">
-                                <span class="repeat"><?php echo $database[$i]['FIO'];?></span>
-                            </div>
-                        </div>
-                    <?php
-                        }
-                    ?>
-                </div> 
+                        <?php
+                            }
+                        ?>
+                    </div> 
+                </div>
             </div>
                   
         </div>

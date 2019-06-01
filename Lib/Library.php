@@ -32,7 +32,7 @@
     }
 
 
-    $query = "SELECT * FROM book JOIN author on book.id=author.id_author limit 5";
+    $query = "SELECT * FROM book JOIN author on book.id=author.id_author";
     $result = mysqli_query($link, $query);
 
     $books = array();
@@ -59,6 +59,16 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/slick-theme.css"/>
+    <link rel="stylesheet" href="../css/slider.css" type="text/css">
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/slick.min.js"></script>
+    <script type="text/javascript" src="../js/slider_library.js"></script>
+    
+
 </head>
 <body>
     <header>
@@ -115,17 +125,17 @@
                     <div class="Item">
                         <div class="item_background">
                             <b>Fantasy</b>
-                            <p>15 258 <i class="fas fa-book"></i></p>
+                            <p><?php echo $quantity_books_by_genres[1]['quantity'];?> <i class="fas fa-book"></i></p>
                         </div>
                         <div class="img_color">
-                            <img src="../img/popular_genre_img/rocket.png" alt=""">
+                            <img src="../img/popular_genre_img/rocket.png" alt="">
                         </div>
                     </div> 
                     
                     <div class="Item">
                         <div class="item_background">
                             <b>Business books</b>
-                            <p>7 216 <i class="fas fa-book"></i></p>
+                            <p><?php echo $quantity_books_by_genres[0]['quantity'];?> <i class="fas fa-book"></i></p>
                         </div>
                         <div class="img_color">
                             <img src="../img/popular_genre_img/purse.png" alt="">
@@ -136,7 +146,7 @@
                     <div class="Item">
                         <div class="item_background">
                             <b>Romance novels</b>
-                            <p>11 281 <i class="fas fa-book"></i></p>
+                            <p><?php echo $quantity_books_by_genres[2]['quantity'];?> <i class="fas fa-book"></i></p>
                         </div>
                         <div class="img_color">
                             <img src="../img/popular_genre_img/heart.png" alt="">
@@ -146,7 +156,7 @@
                     <div class="Item">
                         <div class="item_background">
                             <b>Psychology books</b>
-                            <p>8 403 <i class="fas fa-book"></i></p>
+                            <p><?php echo $quantity_books_by_genres[4]['quantity'];?> <i class="fas fa-book"></i></p>
                         </div>
                         <div class="img_color">
                             <img src="../img/popular_genre_img/brain.png" alt="">
@@ -155,11 +165,11 @@
 
                     <div class="Item">
                         <div class="item_background">
-                            <b>Fantasy</b>
-                            <p>15 311 <i class="fas fa-book"></i></p>
+                            <b>DataBase</b>
+                            <p><?php echo $quantity_books_by_genres[3]['quantity'];?> <i class="fas fa-book"></i></p>
                         </div>
                         <div class="img_color">
-                            <img src="../img/popular_genre_img/7d85aea1-9ed8-4117-9f18-d539a479b842.png" alt="">
+                            <img src="../img/popular_genre_img/database.jpg" alt="">
                         </div>
                     </div>
 
@@ -201,25 +211,42 @@
                             </div>
                         </div>                                
                     </div>
-                    <div class="Items">
-                    <?php
-                        for($i = 0; $i < count($books); $i++){
-                    ?>
-                        <div class="bookItem">
-                            <div class="photo">
-                                <a href="../book/book.php?id=<?php echo $books[$i]['id'];?>"><img src="../<?php echo $books[$i]['img'];?>" alt="" width="124" height="196"></a>
-                            </div>
-                            <div class="name repeat">
-                                <span class="repeat"><?php echo $books[$i]['1'];?></span>
-                            </div>
-                            <div class="autor repeat">
-                                <span class="repeat"><?php echo $books[$i]['FIO'];?></span>
-                            </div>
-                        </div> 
-                    <?php
-                        }
-                    ?>     
-                    </div> 
+                    <div class="box_slider">
+                        <div class="Items items2">
+                            <?php
+                                for($i = 0; $i < count($books); $i++){
+                            ?>
+                                <div class="bookItem">
+                                    <div class="photo">
+                                        <a href="../book/book.php?id=<?php echo $books[$i]['id'];?>"><img src="../<?php echo $books[$i]['img'];?>" alt="" width="124" height="196"></a>
+                                    </div>
+                                    <div class="name repeat">
+                                        <span class="repeat"><?php echo $books[$i]['1'];?></span>
+                                    </div>
+                                    <div class="autor repeat">
+                                        <span class="repeat"><?php echo $books[$i]['FIO'];?></span>
+                                    </div>
+                                    <?php 
+                                    if(!empty($_SESSION['logged_user']) && $_SESSION['logged_user'] == "admin@gmail.com"){
+                                    ?>
+                                        <div class="admin_buttons">
+                                            <div class="delete_button">
+                                                <a href="../admin/delete.php?id=<?php echo $books[$i]['id'];?>"><input class="button_admin" type="submit" name="do_delete" value="Delete"></a>
+                                            </div>
+
+                                            <div class="update_button">
+                                                <a href="../admin/update.php?id=<?php echo $books[$i]['id'];?>"><input class="button_admin" type="submit" name="do_update" value="Update"></a>
+                                            </div>
+                                        </div>
+                                    <?php
+                                        }
+                                    ?>
+                                </div> 
+                            <?php
+                                }
+                            ?>     
+                        </div>
+                    </div>                     
                 </div>
 
                 <div class="Text_Container">

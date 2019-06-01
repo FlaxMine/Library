@@ -139,6 +139,7 @@
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 6px 0 rgba(37,38,40,.2);
+    height: 70px;
 }
 
 .Item p{
@@ -346,6 +347,10 @@
     background: #fff;
     padding: 15px 15px 15px;
     border-radius: 12px;
+}
+
+.right_part{
+    width: 76.8%;
 }
 
 .quantity_genre{
