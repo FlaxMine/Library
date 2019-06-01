@@ -88,8 +88,7 @@
             && $result_query_attribute == TRUE){
             echo "Данные успешно добавлены!";
         }else { echo "Ошибка!";}
-    }
-    
+    }   
 ?>
 
 <!DOCTYPE html>
