@@ -35,8 +35,6 @@
         }  
     }
 
-    
-
     if(isset($_REQUEST['Insert'])){
 
         $nameBook = mysqli_real_escape_string($link, $_REQUEST['nameBook']);
