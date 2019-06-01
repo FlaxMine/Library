@@ -249,57 +249,58 @@
                 </div>
 
                 <div class="Text_Container">
-            <h2 class="main_paragraph">About the catalog of books</h2>
-            <article class="Text_arcticle width_article">
-                <section class="Text_section">
-                    <p class="text">
-                        Every day, new items arrive at the LibBook library. 
-                        These are books and audiobooks.of all genres: classic and modern literature, reprints and 
-                        new works of popular authors. Our catalog is a branchy tree. 
-                        Detectives, love stories, fantasy, science fiction, non-fiction and
-                        Business books are the most popular genres. Each section contains
-                        several categories that distribute works by topics and clarify
-                        search for the right books.
-                    </p>
+                    <h2 class="main_paragraph">About the catalog of books</h2>
 
-                    <p class="text">
-                        In the section of modern prose you will meet Nesbyo and Akunin, Barnes and Tokarev,
-                        Pelevin and Sorokina - the whole range of writers who create literature
-                        Today. Masterpieces of Dostoevsky, Tolstoy, Bunin and Kuprin - in the section
-                        classic literature. Many of the classic novels and short stories can
-                        read for free
-                    </p>
+                    <article class="Text_arcticle width_article">
+                        <section class="Text_section">
+                            <p class="text">
+                                Every day, new items arrive at the LibBook library. 
+                                These are books and audiobooks.of all genres: classic and modern literature, reprints and 
+                                new works of popular authors. Our catalog is a branchy tree. 
+                                Detectives, love stories, fantasy, science fiction, non-fiction and
+                                Business books are the most popular genres. Each section contains
+                                several categories that distribute works by topics and clarify
+                                search for the right books.
+                            </p>
 
-                    <p class="text">  
-                        If you have questions to yourself, if you want to change or adjust
-                        relationship with loved ones - refer to books on psychology. Thousands of readers
-                        Every day they find information that helps to improve the quality of life.
-                        It is convenient to read these e-books in any situation, noting useful thoughts.
-                        and going back to the point in his notes.
-                    </p>
-                </section>  
+                            <p class="text">
+                                In the section of modern prose you will meet Nesbyo and Akunin, Barnes and Tokarev,
+                                Pelevin and Sorokina - the whole range of writers who create literature
+                                Today. Masterpieces of Dostoevsky, Tolstoy, Bunin and Kuprin - in the section
+                                classic literature. Many of the classic novels and short stories can
+                                read for free
+                            </p>
 
-                <section class="Text_section">
-                    <p class="text">
-                        About how to put things in order, all in time, remember important,
-                        present and sell, plan and count, tell the best books
-                        Russian business publishing houses: Mann, Ivanov and Ferber, Alpina
-                        Publisher "," Eksmo "," Olimp-Business "," Peter ". These books help improve
-                        personal effectiveness and the work of the whole team.                  
+                            <p class="text">  
+                                If you have questions to yourself, if you want to change or adjust
+                                relationship with loved ones - refer to books on psychology. Thousands of readers
+                                Every day they find information that helps to improve the quality of life.
+                                It is convenient to read these e-books in any situation, noting useful thoughts.
+                                and going back to the point in his notes.
+                            </p>
+                        </section>  
 
-                    </p>    
+                        <section class="Text_section">
+                            <p class="text">
+                                About how to put things in order, all in time, remember important,
+                                present and sell, plan and count, tell the best books
+                                Russian business publishing houses: Mann, Ivanov and Ferber, Alpina
+                                Publisher "," Eksmo "," Olimp-Business "," Peter ". These books help improve
+                                personal effectiveness and the work of the whole team.                  
 
-                    <p class="text">      
-                        What to read to have fun? Go to the section of detectives, love
-                        novels, fiction and fantasy. There you will find new items and classics favorite
-                        genres. In the LibBook, everyone can choose a book they like, even a child.
-                        Fairy tales, tales, teaching aids and instructive stories are suitable for
-                        reading with family. You can read and listen to books online on the site.
-                        or in a mobile application, even without the Internet.
-                    </p>
-                </section>
-            </article>
-        </div>
+                            </p>    
+
+                            <p class="text">      
+                                What to read to have fun? Go to the section of detectives, love
+                                novels, fiction and fantasy. There you will find new items and classics favorite
+                                genres. In the LibBook, everyone can choose a book they like, even a child.
+                                Fairy tales, tales, teaching aids and instructive stories are suitable for
+                                reading with family. You can read and listen to books online on the site.
+                                or in a mobile application, even without the Internet.
+                            </p>
+                        </section>
+                    </article>
+                </div>
             </div>
         </div>
     </main>
