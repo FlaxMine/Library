@@ -5,7 +5,7 @@
     require "../database/connection.php";
     $link = ConnectionDB();
 
-    $id = $_REQUEST['id_author'];
+    $id = intval($_REQUEST['id_author']);
 
     $query = "SELECT * FROM author WHERE id_author = $id";
     $query2 = "SELECT * FROM information_author WHERE id_author = $id";

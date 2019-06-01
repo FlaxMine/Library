@@ -11,8 +11,8 @@
     if(isset($data['do_signin'])){
         if(($data['email'] != '') or ($data['password'] != '')){
 
-            $email = $data['email'];
-            $password = $data['password'];
+            $email = mysqli_real_escape_string($link, $data['email']);
+            $password = mysqli_real_escape_string($link, $data['password']);
             
             $user = mysqli_query($link, "SELECT email, password FROM users WHERE email='$email'");
             $myrow = mysqli_fetch_array($user);

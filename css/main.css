@@ -237,10 +237,11 @@
 
 .Items{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     background: #fff;
     overflow: visible;
 }
+
 
 .ListBook{
     background: #fff;

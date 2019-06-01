@@ -7,7 +7,7 @@
 
     $link = ConnectionDB();
 
-    $genre = $_REQUEST['genre'];
+    $genre = mysqli_real_escape_string($link, $_REQUEST['genre']);
 
     $books = getBooks($link, $genre);
 

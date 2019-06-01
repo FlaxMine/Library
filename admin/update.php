@@ -38,15 +38,15 @@
     if(isset($_REQUEST['Update'])){
 
         $id_book_field = intval($_REQUEST['id_book_field']);
-        $nameBook = stripslashes($_REQUEST['nameBook']);
-        $aboutBook = stripslashes($_REQUEST['aboutBook']);
+        $nameBook = mysqli_real_escape_string($link, $_REQUEST['nameBook']);
+        $aboutBook = mysqli_real_escape_string($link, $_REQUEST['aboutBook']);
         //$BookImg = $_REQUEST['BookImg'];
 
-        $authorBook = stripslashes($_REQUEST['authorBook']);
+        $authorBook = mysqli_real_escape_string($link, $_REQUEST['authorBook']);
         $authorYear = intval($_REQUEST['authorYear']);
        //$AuthorImg = $_REQUEST['AuthorImg'];
 
-        $aboutAuthor = stripslashes($_REQUEST['aboutAuthor']);
+        $aboutAuthor = mysqli_real_escape_string($link, $_REQUEST['aboutAuthor']);
 
         $genreBook = $_REQUEST['genreBook'];
 
@@ -96,7 +96,7 @@
                 <div class="header">
 
                     <div class="logo">
-                        <a href="index.php"><img src="../img/logo/Logo.PNG" alt=""></a>
+                        <a href="../index.php"><img src="../img/logo/Logo.PNG" alt=""></a>
                     </div>
     
                     <div class="search">
@@ -105,8 +105,8 @@
     
                     <div class="header_menu">
                         <ul class="menu_list">
-                            <a href="dashboard/dashboard.php"><li class="menu_item">What to read</li></a>
-                            <a href="Lib/Library.php"><li class="menu_item">Library</li></a>   
+                            <a href="../dashboard/dashboard.php"><li class="menu_item">What to read</li></a>
+                            <a href="../Lib/Library.php"><li class="menu_item">Library</li></a>   
                         </ul>
                     </div>
                 </div> 
@@ -115,13 +115,13 @@
                     <?php
                         if(empty($_SESSION['logged_user'])){
                     ?>
-                        <a href="authorization/auth.php" class="log_in">Sign in |</a>
-                        <a href="registration/registration.php" class="sign_in">Sing up</a>
+                        <a href="../authorization/auth.php" class="log_in">Sign in |</a>
+                        <a href="../registration/registration.php" class="sign_in">Sing up</a>
                     <?php
                         }
                         else{
                     ?>
-                        <span class="logged_user"><?php echo $_SESSION['logged_user']; ?><a href="logout/logout.php"> | Выйти</a></span>
+                        <span class="logged_user"><?php echo $_SESSION['logged_user']; ?><a href="../logout/logout.php"> | Выйти</a></span>
                     <?php
                         }
                     ?>

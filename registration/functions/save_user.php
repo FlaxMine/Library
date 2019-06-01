@@ -1,12 +1,12 @@
 <?php
 
-    $first_name = mysql_real_escape_string($_POST['name']);
-    $second_name = mysql_real_escape_string($_POST['fam']);
+    $first_name = mysqli_real_escape_string($link, $_POST['name']);
+    $second_name = mysqli_real_escape_string($link, $_POST['fam']);
 
-    $email = mysql_real_escape_string($_POST['email']);
+    $email = mysqli_real_escape_string($link, $_POST['email']);
     $email = trim($email);
 
-    $password = $_POST['password'];
+    $password = mysqli_real_escape_string($link, $_POST['password']);
     $password = password_hash($password, PASSWORD_DEFAULT);
     
     $result = mysqli_query($link, "INSERT INTO users (first_name, second_name, password, email) 

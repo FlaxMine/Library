@@ -207,7 +207,7 @@
                     ?>
                         <div class="bookItem">
                             <div class="photo">
-                                <a href="book/book.php?id=<?php echo $books[$i]['id'];?>"><img src="../<?php echo $books[$i]['img'];?>" alt="" width="124" height="196"></a>
+                                <a href="../book/book.php?id=<?php echo $books[$i]['id'];?>"><img src="../<?php echo $books[$i]['img'];?>" alt="" width="124" height="196"></a>
                             </div>
                             <div class="name repeat">
                                 <span class="repeat"><?php echo $books[$i]['1'];?></span>
