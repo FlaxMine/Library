@@ -224,9 +224,7 @@
                     <input type="submit" class="button add" name="Insert" placeholder="Insert" value="Insert">
                 </div>
             </div>
-        </form>
-
-        
+        </form>       
     </div>
 
     <footer>
