@@ -2,7 +2,7 @@ jQuery(function($){
     $(document).ready(function(){
         $('.Items').slick({
             infinite: true,
-            slidesToShow: 8,
+            slidesToShow: 6,
             slidesToScroll: 4,           
             centerMode: true,
             draggable: true,
