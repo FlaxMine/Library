@@ -142,7 +142,6 @@
                         </div>
                     </div>
 
-
                     <div class="Item">
                         <div class="item_background">
                             <b>Romance novels</b>
