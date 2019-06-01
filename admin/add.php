@@ -39,17 +39,17 @@
 
     if(isset($_REQUEST['Insert'])){
 
-        $nameBook = ($_REQUEST['nameBook']);
-        $aboutBook = ($_REQUEST['aboutBook']);
+        $nameBook = mysqli_real_escape_string($link, $_REQUEST['nameBook']);
+        $aboutBook = mysqli_real_escape_string($link, $_REQUEST['aboutBook']);
         $BookImg = $_REQUEST['BookImg'];
 
-        $authorBook = ($_REQUEST['authorBook']);
+        $authorBook = mysqli_real_escape_string($link, $_REQUEST['authorBook']);
         $authorYear = intval($_REQUEST['authorYear']);
         $AuthorImg = $_REQUEST['AuthorImg'];
 
-        $aboutAuthor = ($_REQUEST['aboutAuthor']);
+        $aboutAuthor = mysqli_real_escape_string($link, $_REQUEST['aboutAuthor']);
 
-        $genreBook = ($_REQUEST['genreBook']);
+        $genreBook = mysqli_real_escape_string($link, $_REQUEST['genreBook']);
 
         $DateWrite = intval($_REQUEST['DateWrite']);
         $YearPublish = intval($_REQUEST['YearPublish']);
