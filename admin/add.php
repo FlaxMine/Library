@@ -69,6 +69,13 @@
         $id_genre = mysqli_fetch_array($result_id_genre);
         $id2 = intval($id_genre['id']);
 
+        
+        $query_last_id = "SELECT MAX(id_author) as LastID FROM author";
+        $result2 = mysqli_query($link, $query_last_id);
+        $id_result2 = mysqli_fetch_array($result2);
+        $id_author = intval($id_result2['LastID']);
+
+        $query_about_author = "INSERT INTO information_author (id_author, about_author, img) VALUES ('$id_author', '$aboutAuthor', '$AuthorImg')"; 
 
         /////////////////////////// AUTHOR //////////////////////////////////
 
@@ -81,27 +88,17 @@
         }
 
         /////////////////////////////////////////////////////////////////////
-
-        
-
-        $query_last_id = "SELECT MAX(id_author) as LastID FROM author";
-        $result2 = mysqli_query($link, $query_last_id);
-        $id_result2 = mysqli_fetch_array($result2);
-        $id_author = intval($id_result2['LastID']);
-
-        $query_about_author = "INSERT INTO information_author (id_author, about_author, img) VALUES ('$id_author', '$aboutAuthor', '$AuthorImg')"; 
+       
         $query_author_book = "INSERT INTO author_book (id_author, id_book) VALUES ('$id_author', '$id_book')";
 
         $result_query_author_book = mysqli_query($link, $query_author_book);
         
-       
 
         $query_attribute = "INSERT INTO attribute (id_genre, id_book) VALUES ('$id2', '$id_book')";
         
         $query_detailed_information = "INSERT INTO detailed_information (year_edition, year_write, quantity_page, id_book, description) 
                                         VALUES ('$YearPublish', '$DateWrite', '$QuantityPage', '$id_book', '$aboutBook')";
 
-        
         $result_query_detailed_information = mysqli_query($link, $query_detailed_information);
         $result_query_attribute = mysqli_query($link, $query_attribute);
 
