@@ -21,9 +21,6 @@
     $result2 = mysqli_query($link, $query_get_description_genre);
 
     $description_genre = mysqli_fetch_array($result2);
-
-
-    $a = 0;
 ?>
 
 

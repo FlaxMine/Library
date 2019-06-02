@@ -6,7 +6,6 @@
 
     $data = $_POST;
     $errors = array();
-    
 
     if(isset($data['do_signin'])){
         if(($data['email'] != '') or ($data['password'] != '')){
