@@ -102,7 +102,7 @@
                 <a href="../author/author.php?id_author=<?php echo $name_author['id_author'];?>"><span class="image_arrow"> <i class="fas fa-chevron-right"></i> &nbsp;<?php echo $name_author['FIO'];?></span></a>
             </li>
             <li class="item_menu">
-                <a href="#"><span class="image_arrow"> <i class="fas fa-chevron-right"></i> &nbsp;<?php echo $detailed_information['name'];?></span></a>
+                <span class="image_arrow menu_name_book"> <i class="fas fa-chevron-right"></i> &nbsp;<?php echo $detailed_information['name'];?></span>
             </li>
         </ul>
     </div>

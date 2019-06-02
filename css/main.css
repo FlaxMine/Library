@@ -6,8 +6,8 @@
 }
 
 .container{
-    margin-left: 120px;
-    margin-right: 120px;
+    margin-left: 20%;
+    margin-right: 20%;
     margin-top: 10px;
 }
 
@@ -235,10 +235,8 @@
 }
 
 
-
 .Items{
     display: flex;
-    justify-content: flex-start;
     background: #fff;
     overflow: visible;
 }
@@ -260,7 +258,7 @@
 }
 
 .bookItem{
-    margin-right: 20px;
+    margin-right: 50px;
 }
 
 .photo img{

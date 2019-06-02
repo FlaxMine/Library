@@ -106,25 +106,27 @@
                 <div class="nameList">
                     <span><?php echo $_REQUEST['genre'];?></span>
                 </div>
-                <div class="Items">
-                <?php 
-                    for($i = 0; $i < count($books); $i++){
-                ?>
-                    <div class="bookItem">
-                        <div class="photo">
-                            <a href="../book/book.php?id=<?php echo $books[$i]['id'];?>"><img src="../<?php echo  $books[$i]['img']?>" alt="" width="124" height="196"></a>
-                        </div>
-                        <div class="name repeat">
-                            <span class="repeat"><?php echo  $books[$i]['name']?></span>
-                        </div>
-                        <div class="autor repeat">
-                            <span class="repeat"><?php echo  $books[$i]['FIO']?></span>
-                        </div>
+                <div class="box_slider">
+                    <div class="Items">
+                        <?php 
+                            for($i = 0; $i < count($books); $i++){
+                        ?>
+                            <div class="bookItem">
+                                <div class="photo">
+                                    <a href="../book/book.php?id=<?php echo $books[$i]['id'];?>"><img src="../<?php echo  $books[$i]['img']?>" alt="" width="124" height="196"></a>
+                                </div>
+                                <div class="name repeat">
+                                    <span class="repeat"><?php echo  $books[$i]['name']?></span>
+                                </div>
+                                <div class="autor repeat">
+                                    <span class="repeat"><?php echo  $books[$i]['FIO']?></span>
+                                </div>
+                            </div> 
+                        <?php
+                            }
+                        ?>                    
                     </div> 
-                <?php
-                    }
-                ?>                    
-                </div> 
+                </div>
             </div>  
 
             <div class="Text_section">

@@ -16,6 +16,13 @@
     $author = mysqli_fetch_array($result);
     $author_information = mysqli_fetch_array($result2);
 
+    $query_author_books = "SELECT * FROM (SELECT id_book FROM author_book WHERE id_author = $id) AS BOOKS JOIN book on id_book = book.id";
+    $result_query_author_books = mysqli_query($link, $query_author_books);
+
+    $books_author = array();
+    while($book = mysqli_fetch_array($result_query_author_books)){
+        $books_author[] = $book;
+    }
 ?>
 
 
@@ -129,126 +136,23 @@
 
         <div class="box_slider">
             <div class="Items">
+            <?php 
+                for($i = 0; $i < count($books_author); $i++){
+            ?>
                 <div class="bookItem">
                     <div class="photo">
-                        <a href="#"><img src="../img/book/225f8718-61c1-4ae3-a5ad-5c33193cc98c.jpg" alt="" width="124" height="196"></a>
+                        <a href="#"><img src="../<?php echo $books_author[$i]['img'];?>" alt="" width="124" height="196"></a>
                     </div>
                     <div class="name repeat">
-                        <span class="repeat">Айвенго</span>
+                        <span class="repeat"><?php echo $books_author[$i]['name'];?></span>
                     </div>
                     <div class="autor repeat">
-                        <span class="repeat">Вальтер Скотт</span>
-                    </div>
-                </div>  
-                
-                <div class="bookItem">
-                    <div class="photo">
-                        <a href="#"><img src="../img/book/225f8718-61c1-4ae3-a5ad-5c33193cc98c.jpg" alt="" width="124" height="196"></a>
-                    </div>
-                    <div class="name repeat">
-                        <span class="repeat">Айвенго</span>
-                    </div>
-                    <div class="autor repeat">
-                        <span class="repeat">Вальтер Скотт</span>
-                    </div>
-                </div>  
-
-                <div class="bookItem">
-                    <div class="photo">
-                        <a href="#"><img src="../img/book/225f8718-61c1-4ae3-a5ad-5c33193cc98c.jpg" alt="" width="124" height="196"></a>
-                    </div>
-                    <div class="name repeat">
-                        <span class="repeat">Айвенго</span>
-                    </div>
-                    <div class="autor repeat">
-                        <span class="repeat">Вальтер Скотт</span>
-                    </div>
-                </div>  
-
-                <div class="bookItem">
-                    <div class="photo">
-                        <a href="#"><img src="../img/book/225f8718-61c1-4ae3-a5ad-5c33193cc98c.jpg" alt="" width="124" height="196"></a>
-                    </div>
-                    <div class="name repeat">
-                        <span class="repeat">Айвенго</span>
-                    </div>
-                    <div class="autor repeat">
-                        <span class="repeat">Вальтер Скотт</span>
-                    </div>
-                </div>  
-
-                <div class="bookItem">
-                    <div class="photo">
-                        <a href="#"><img src="../img/book/225f8718-61c1-4ae3-a5ad-5c33193cc98c.jpg" alt="" width="124" height="196"></a>
-                    </div>
-                    <div class="name repeat">
-                        <span class="repeat">Айвенго</span>
-                    </div>
-                    <div class="autor repeat">
-                        <span class="repeat">Вальтер Скотт</span>
+                        <span class="repeat"><?php echo $author['FIO'];?></span>
                     </div>
                 </div> 
-
-                <div class="bookItem">
-                    <div class="photo">
-                        <a href="#"><img src="../img/book/225f8718-61c1-4ae3-a5ad-5c33193cc98c.jpg" alt="" width="124" height="196"></a>
-                    </div>
-                    <div class="name repeat">
-                        <span class="repeat">Айвенго</span>
-                    </div>
-                    <div class="autor repeat">
-                        <span class="repeat">Вальтер Скотт</span>
-                    </div>
-                </div> 
-
-                <div class="bookItem">
-                    <div class="photo">
-                        <a href="#"><img src="../img/book/225f8718-61c1-4ae3-a5ad-5c33193cc98c.jpg" alt="" width="124" height="196"></a>
-                    </div>
-                    <div class="name repeat">
-                        <span class="repeat">Айвенго</span>
-                    </div>
-                    <div class="autor repeat">
-                        <span class="repeat">Вальтер Скотт</span>
-                    </div>
-                </div> 
-
-                <div class="bookItem">
-                    <div class="photo">
-                        <a href="#"><img src="../img/book/225f8718-61c1-4ae3-a5ad-5c33193cc98c.jpg" alt="" width="124" height="196"></a>
-                    </div>
-                    <div class="name repeat">
-                        <span class="repeat">Айвенго</span>
-                    </div>
-                    <div class="autor repeat">
-                        <span class="repeat">Вальтер Скотт</span>
-                    </div>
-                </div> 
-
-                <div class="bookItem">
-                    <div class="photo">
-                        <a href="#"><img src="../img/book/225f8718-61c1-4ae3-a5ad-5c33193cc98c.jpg" alt="" width="124" height="196"></a>
-                    </div>
-                    <div class="name repeat">
-                        <span class="repeat">Айвенго</span>
-                    </div>
-                    <div class="autor repeat">
-                        <span class="repeat">Вальтер Скотт</span>
-                    </div>
-                </div> 
-
-                <div class="bookItem">
-                    <div class="photo">
-                        <a href="#"><img src="../img/book/225f8718-61c1-4ae3-a5ad-5c33193cc98c.jpg" alt="" width="124" height="196"></a>
-                    </div>
-                    <div class="name repeat">
-                        <span class="repeat">Айвенго</span>
-                    </div>
-                    <div class="autor repeat">
-                        <span class="repeat">Вальтер Скотт</span>
-                    </div>
-                </div>
-
+            <?php
+                }
+            ?>             
             </div> 
         </div>
     </div>
