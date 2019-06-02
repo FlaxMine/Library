@@ -23,6 +23,7 @@
     while($book = mysqli_fetch_array($result_query_author_books)){
         $books_author[] = $book;
     }
+    
 ?>
 
 
