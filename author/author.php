@@ -23,6 +23,8 @@
     while($book = mysqli_fetch_array($result_query_author_books)){
         $books_author[] = $book;
     }
+
+    $a = 0;
     
 ?>
 
@@ -150,6 +152,22 @@
                     <div class="autor repeat">
                         <span class="repeat"><?php echo $author['FIO'];?></span>
                     </div>
+
+                    <?php 
+                        if(!empty($_SESSION['logged_user']) && $_SESSION['logged_user'] == "admin@gmail.com"){
+                    ?>
+                        <div class="admin_buttons">
+                            <div class="delete_button">
+                                <a href="../admin/delete.php?id=<?php echo $books_author[$i]['id_book'];?>"><input class="button_admin" type="submit" name="do_delete" value="Delete"></a>
+                            </div>
+
+                            <div class="update_button">
+                                <a href="../admin/update.php?id=<?php echo $books_author[$i]['id_book'];?>"><input class="button_admin" type="submit" name="do_update" value="Update"></a>
+                            </div>
+                        </div>
+                    <?php
+                        }
+                    ?>
                 </div> 
             <?php
                 }
