@@ -5,21 +5,13 @@
     require "database/connection.php";
     $link = ConnectionDB();
 
+    $query = "SELECT * FROM book JOIN author on book.id=author.id_author";
+    $result = mysqli_query($link, $query);
+
     $books = array();
-    $author = array();
 
-    $query2 = "SELECT * from author_book JOIN book on author_book.id_author = book.id";
-    $result_query2 = mysqli_query($link, $query2);
-
-    while($myrow = mysqli_fetch_array($result_query2)){
+    while($myrow = mysqli_fetch_array($result)){
         $books[] =  $myrow;
-    };
-
-    $query = "SELECT * from author_book JOIN author on author_book.id_author = author.id_author";
-    $result_query = mysqli_query($link, $query);
-
-    while($myrow = mysqli_fetch_array($result_query)){
-        $author[] =  $myrow;
     };
 ?>
 
@@ -166,7 +158,7 @@
                                         <span class="repeat"><?php echo $books[$i]['1'];?></span>
                                     </div>
                                     <div class="autor repeat">
-                                        <span class="repeat"><?php echo $author[$i]['FIO'];?></span>
+                                        <span class="repeat"><?php echo $books[$i]['FIO'];?></span>
                                     </div>
 
                                     <?php 
@@ -221,7 +213,7 @@
                                         <span class="repeat"><?php echo $books[$i]['1'];?></span>
                                     </div>
                                     <div class="autor repeat">
-                                        <span class="repeat"><?php echo $author[$i]['FIO'];?></span>
+                                        <span class="repeat"><?php echo $books[$i]['FIO'];?></span>
                                     </div>
 
                                     <?php 
